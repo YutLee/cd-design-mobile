@@ -1,0 +1,32 @@
+{
+  "name": "cd-design-mobile",
+  "version": "0.0.1-beta.1",
+  "description": "A UI design language and React components implementation",
+  "keywords": [
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "files": ["src"],
+  "main": "./src/index.umd.js",
+  "module": "./src/index.es.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.es.js",
+      "require": "./src/index.umd.js"
+    }
+  },
+  "repository": "https://github.com/YutLee/cd-design-mobile.git",
+  "author": "YutLee",
+  "license": "MIT",
+  "dependencies": {
+    "cd-hooks": "^0.0.1-beta.7",
+    "classnames": "^2.3.1"
+  }
+}

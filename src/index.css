@@ -1,0 +1,71 @@
+:root {
+  --oc-bg-color: #5468ff;
+  --oc-text-color: #1c1e21;
+  --oc-spacing: 12px;
+  --oc-icon-stroke-width: 1.4;
+  --oc-highlight-color: var(--oc-primary-color);
+  --oc-muted-color: #969faf;
+  --oc-container-background: rgba(101,108,133,.8);
+  --oc-logo-color: #5468ff;
+  --oc-modal-width: 560px;
+  --oc-modal-height: 600px;
+  --oc-modal-background: #f5f6f7;
+  --oc-modal-shadow: inset 1px 1px 0 0 hsla(0,0%,100%,.5),0 3px 8px 0 #555a64;
+  --oc-searchbox-height: 56px;
+  --oc-searchbox-background: #ebedf0;
+  --oc-searchbox-focus-background: #fff;
+  --oc-searchbox-shadow: inset 0 0 0 2px var(--oc-primary-color);
+  --oc-hit-height: 56px;
+  --oc-hit-color: #444950;
+  --oc-hit-active-color: #fff;
+  --oc-hit-background: #fff;
+  --oc-hit-shadow: 0 1px 3px 0 #d4d9e1;
+  --oc-key-gradient: linear-gradient(-225deg,#d5dbe4,#f8f8f8);
+  --oc-key-shadow: inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 2px 1px rgba(30,35,90,.4);
+  --oc-footer-height: 44px;
+  --oc-footer-background: #fff;
+  --oc-footer-shadow: 0 -1px 0 0 #e0e3e8,0 -3px 6px 0 rgba(69,98,155,.12)
+}
+
+html {
+  --oc-radius-s: 2px;
+  --oc-radius-m: 4px;
+  --oc-radius-l: 8px;
+  --oc-radius-xl: 16px;
+  --oc-space-s: 2px;
+  --oc-space-m: 4px;
+  --oc-space-l: 8px;
+  --oc-space-xl: 16px;
+  --oc-primary-color: #FABE00;
+  --oc-primary-color-hover: #FFD961;
+  --oc-primary-color-active: #FFD961;
+  --oc-primary-color-outline: rgba(24, 144, 255, .2);
+  --oc-success-color: #34CB69;
+  --oc-success-color-hover: #73d13d;
+  --oc-success-color-active: #389e0d;
+  --oc-success-color-outline: rgba(82, 196, 26, .2);
+  --oc-success-color-deprecated-bg: #f6ffed;
+  --oc-success-color-deprecated-border: #b7eb8f;
+  --oc-error-color: #F3202B;
+  --oc-error-color-hover: #ff7875;
+  --oc-error-color-active: #d9363e;
+  --oc-error-color-outline: rgba(255, 77, 79, .2);
+  --oc-error-color-deprecated-bg: #fff2f0;
+  --oc-error-color-deprecated-border: #ffccc7;
+  --oc-warning-color: #F5A84E;
+  --oc-warning-color-hover: #ffc53d;
+  --oc-warning-color-active: #d48806;
+  --oc-warning-color-outline: rgba(250, 173, 20, .2);
+  --oc-warning-color-deprecated-bg: #fffbe6;
+  --oc-warning-color-deprecated-border: #ffe58f;
+  --oc-info-color: #4EBBF5;
+  --oc-info-color-hover: #ffc53d;
+  --oc-info-color-active: #d48806;
+  --oc-info-color-outline: rgba(250, 173, 20, .2);
+  --oc-info-color-deprecated-bg: #e6f7ff;
+  --oc-info-color-deprecated-border: #91d5ff
+}
+
+html[data-theme=dark] {
+
+}

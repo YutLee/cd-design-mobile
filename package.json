@@ -1,0 +1,25 @@
+{
+  "name": "cd-design-mobile",
+  "version": "0.0.1-beta.1",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "cd-hooks": "^0.0.1-beta.7",
+    "classnames": "^2.3.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "postcss-nesting": "^10.0.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "vite-plugin-dts": "^0.9.6"
+  }
+}

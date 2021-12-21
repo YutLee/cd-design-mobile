@@ -1,0 +1,30 @@
+.oc-button {
+  border: none;
+  background: #F0F0F0;
+  border-radius: var(--oc-radius-m);
+  padding: 0 8px;
+  color: #595959;
+  height: 32px;
+  font-size: 12px;
+
+  &.oc-button-s {
+    height: 24px;
+    font-size: 10px;
+  }
+
+  &.oc-button-l {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  &.oc-button-xl {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  &.oc-button-primary {
+    color: #fff;
+    background-color: var(--oc-primary-color)
+  }
+}
+
