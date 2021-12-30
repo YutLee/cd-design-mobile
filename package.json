@@ -1,12 +1,13 @@
 {
   "name": "cd-design-mobile",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.3",
   "scripts": {
-    "start": "vite",
+    "start": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "@tanem/svg-injector": "^10.1.13",
     "cd-hooks": "^0.0.1-beta.7",
     "classnames": "^2.3.1",
     "react": "^17.0.0",

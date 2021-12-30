@@ -1,6 +1,6 @@
 {
   "name": "cd-design-mobile",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.3",
   "description": "A UI design language and React components implementation",
   "keywords": [
     "component",
@@ -20,7 +20,8 @@
     ".": {
       "import": "./src/index.es.js",
       "require": "./src/index.umd.js"
-    }
+    },
+    "./css": "./src/style.css"
   },
   "repository": "https://github.com/YutLee/cd-design-mobile.git",
   "author": "YutLee",
