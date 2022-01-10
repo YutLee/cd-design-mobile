@@ -1,6 +1,7 @@
 import './app.css'
 import ButtonDemo from './button/demo/demo1'
 import IconDemo from './icon/demo/demo1'
+import DividerDemo from './divider/demo/demo1'
 
 function App() {
   return (
@@ -10,6 +11,8 @@ function App() {
       <IconDemo />
       <h4>按钮组件 Button</h4>
       <ButtonDemo />
+      <h4>分割线组件 Divider</h4>
+      <DividerDemo />
     </div>
   )
 }

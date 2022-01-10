@@ -41,8 +41,8 @@ html {
   --cd-bg-color: #f2f2f2;
   --cd-bg-white-color: #fff;
   --cd-bg-gray-color: #d9d9d9;
-  --cd-text-color: #1c1e21;
-  --cd-divide-color: #f0f0f0;
+  /* --cd-text-color: #1c1e21; */
+  --cd-divider-color: #f0f0f0;
   --cd-border-color: #e0e0e0;
   --cd-disabled-color: #ebebeb;
   --cd-brand-color: #008cd6;
