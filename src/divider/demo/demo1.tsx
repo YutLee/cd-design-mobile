@@ -1,4 +1,4 @@
-import Divider from ".."
+import Divider from '..'
 
 export default () => {
   return (

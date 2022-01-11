@@ -9,7 +9,6 @@ export type DividerProps = {
   dashed?: boolean
   align?: 'left' | 'center' | 'right'
   type?: 'horizontal' | 'vertical'
-  onClick?: React.MouseEventHandler<HTMLElement>
 }
 
 const Divider = React.forwardRef<unknown, DividerProps>((props: DividerProps, ref) => {

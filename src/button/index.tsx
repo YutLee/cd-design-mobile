@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import classNames from 'classnames'
 import { BaseProps, ComponentSizeType, AnchorTargetType } from '../utils/type'
 import './index.css'

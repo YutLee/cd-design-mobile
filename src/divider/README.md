@@ -12,5 +12,5 @@
 children | 嵌套的标题 | ReactNode | -
 className | 分割线样式类 | string | -
 dashed | 是否虚线 | boolean | false
-align | 分割线标题的位置 | `left` | `right` | `center` | `center`
-type | 水平还是垂直类型 | `horizontal` | `vertical` | `horizontal`
+align | 分割线标题的位置 | `left` \| `right` \| `center` | `center`
+type | 水平还是垂直类型 | `horizontal` \| `vertical` | `horizontal`

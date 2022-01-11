@@ -2,6 +2,7 @@ import './app.css'
 import ButtonDemo from './button/demo/demo1'
 import IconDemo from './icon/demo/demo1'
 import DividerDemo from './divider/demo/demo1'
+import SwitchDemo from './switch/demo/demo1'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <ButtonDemo />
       <h4>分割线组件 Divider</h4>
       <DividerDemo />
+      <h4>开关组件 Switch</h4>
+      <SwitchDemo />
     </div>
   )
 }
