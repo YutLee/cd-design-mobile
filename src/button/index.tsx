@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react'
 import classNames from 'classnames'
-import { BaseProps, ComponentSizeType, AnchorTargetType } from '../utils/type'
+import { ComponentSizeType, AnchorTargetType } from '../utils/type'
 import './index.css'
 import '../index.css'
 
-export type ButtonProps = BaseProps & {
+export type ButtonProps = {
   block?: boolean
   children?: ReactNode
+  className?: string
   danger?: boolean
   disabled?: boolean
   hollow?: boolean
