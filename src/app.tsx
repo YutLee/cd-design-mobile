@@ -4,6 +4,7 @@ import IconDemo from './icon/demo/demo1'
 import DividerDemo from './divider/demo/demo1'
 import SwitchDemo from './switch/demo/demo1'
 import GridDemo from './grid/demo/demo1'
+import BadgeDemo from './badge/demo/demo1'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <SwitchDemo />
       <h4>Grid 栅格</h4>
       <GridDemo />
+      <h4>Badge 徽标</h4>
+      <BadgeDemo />
     </div>
   )
 }

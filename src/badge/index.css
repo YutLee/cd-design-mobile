@@ -1,0 +1,38 @@
+.cd-badge {
+  position: relative;
+
+  & .cd-badge-dot, & .cd-badge-count {
+    position: absolute;
+    background: var(--cd-strong-color);
+    border: 1px solid var(--cd-white-color);
+    border-radius: 12px;
+    color: var(--cd-white-color);
+    font-size: var(--cd-label-text-size);
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0%;
+    display: inline-block;
+  }
+
+  & .cd-badge-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  & .cd-badge-count {
+    padding: 0px 5px;
+    min-width: 6px;
+    height: 16px;
+    line-height: 16px;
+  }
+
+  &.cd-badge-no-wrapper {
+    & .cd-badge-dot, & .cd-badge-count {
+      position: relative;
+      transform: none;
+      vertical-align: top;
+    }
+  }
+}
+

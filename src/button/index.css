@@ -7,7 +7,7 @@
 
 .cd-button {
   border: none;
-  background: var(--cd-divide-color);
+  background: var(--cd-divider-color);
   border-radius: var(--cd-radius-m);
   padding: 0 var(--cd-space-l);
   color: var(--cd-title-color);
