@@ -1,7 +1,6 @@
 import { SVGInjector } from '@tanem/svg-injector'
-import { useMount } from 'cd-hooks'
 import classNames from 'classnames'
-import React, { useRef } from 'react'
+import React, { useEffect } from 'react'
 import { ComponentSizeType } from '../utils/type'
 import './index.css'
 
@@ -36,10 +35,13 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
     className
   )
   const iconRef = (ref as any) || React.createRef<HTMLElement>()
-  const svgRef = useRef(null)
 
-  useMount(() => {
-    SVGInjector(svgRef.current, {
+  useEffect(() => {
+    const inner = document.createElement('span')
+    inner.setAttribute('data-src', src)
+    iconRef.current.innerHTML = ''
+    iconRef.current.appendChild(inner)
+    SVGInjector(inner, {
       beforeEach(svg) {
         svg.setAttribute('width', '100%')
         svg.setAttribute('height', '100%')
@@ -83,12 +85,10 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
         }
       }
     })
-  })
+  }, [src])
 
   return (
-    <span ref={iconRef} className={classes} style={style} {...rest}>
-      <span ref={svgRef} data-src={src}></span>
-    </span>
+    <span data-src={src} ref={iconRef} className={classes} style={style} {...rest}></span>
   )
 })
 
