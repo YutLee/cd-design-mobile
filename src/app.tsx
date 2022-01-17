@@ -5,6 +5,7 @@ import DividerDemo from './divider/demo/demo1'
 import SwitchDemo from './switch/demo/demo1'
 import GridDemo from './grid/demo/demo1'
 import BadgeDemo from './badge/demo/demo1'
+import CheckboxDemo from './checkbox/demo/demo1'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       <GridDemo />
       <h4>Badge 徽标</h4>
       <BadgeDemo />
+      <h4>Checkbox 复选框</h4>
+      <CheckboxDemo />
     </div>
   )
 }
