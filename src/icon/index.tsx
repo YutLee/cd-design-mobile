@@ -1,6 +1,6 @@
 import { SVGInjector } from '@tanem/svg-injector'
 import classNames from 'classnames'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { ComponentSizeType } from '../utils/type'
 import './index.css'
 
@@ -85,7 +85,7 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
         }
       }
     })
-  }, [src])
+  }, [src, fill, childFill, color])
 
   return (
     <span data-src={src} ref={iconRef} className={classes} style={style} {...rest}></span>
