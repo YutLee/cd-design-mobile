@@ -24,6 +24,8 @@ export type CheckboxExpandProps = {
   disabled?: boolean
   value?: string | number | undefined
   change?: ChangeEventHandler
+  enable?: ChangeEventHandler
+  valid?: ChangeEventHandler
 }
 export type CheckboxInputProps = HTMLElement & CheckboxExpandProps | CheckboxExpandProps
 
@@ -50,6 +52,7 @@ const InternalCheckbox = React.forwardRef<unknown, CheckboxProps>((props, ref) =
     onChange,
     ...rest
   } = props
+
   const [disable, setDisable] = useState(disabled)
   const [inv, setInv] = useState(invalid)
   const [check, setCheck] = useState(checked)
@@ -107,15 +110,36 @@ const InternalCheckbox = React.forwardRef<unknown, CheckboxProps>((props, ref) =
     checkedAll(check, event)
   }
 
+  const allChange = () => {
+    const allCheckbox = document.getElementsByName(`cd-checkbox-all-${name}`)
+    let all: CheckboxInputProps
+
+
+    for(let i = 0; i < allCheckbox.length; i++) {
+      all = allCheckbox[i]
+      if (all.getAttribute('data-invalid') === 'true') {
+        setInv(true)
+        break
+      }
+
+      if (all.disabled) {
+        setDisable(true)
+        break
+      }
+    }
+  }
+
   useEffect(() => {
     setCheck(checked)
   }, [checked])
 
   useEffect(() => {
+    allChange()
     setDisable(disabled)
   }, [disabled])
 
   useEffect(() => {
+    allChange()
     setInv(invalid)
   }, [invalid])
 
@@ -124,8 +148,16 @@ const InternalCheckbox = React.forwardRef<unknown, CheckboxProps>((props, ref) =
   }, [value])
 
   useMount(() => {
+    allChange()
+
     currentRef.current.change = (checked: boolean) => {
       setCheck(checked)
+    }
+    currentRef.current.enabled = (enabled: boolean) => {
+      setDisable(!enabled)
+    }
+    currentRef.current.valid = (valid: boolean) => {
+      setInv(!valid)
     }
   })
 
@@ -142,7 +174,7 @@ const InternalCheckbox = React.forwardRef<unknown, CheckboxProps>((props, ref) =
       {...rest}
       onClick={handleClick}
     >
-      <Icon src={iconSrc} fill={disabled ? '#ebebeb' : check ? '#fabe00' : '#e0e0e0'} />
+      <Icon src={iconSrc} fill={disable ? '#ebebeb' : check ? '#fabe00' : '#e0e0e0'} />
       {
         label && <label className="cd-checkbox-label">{label}</label>
       }

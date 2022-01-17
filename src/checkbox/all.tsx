@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import InternalCheckbox, { CheckboxChangeEventHandler, CheckboxInputProps, CheckboxOptions } from './checkbox'
 import './index.css'
 import '../index.css'
+import { useMount } from 'cd-hooks'
 
 export type ValuesProps = {
   checked: boolean
@@ -32,6 +33,9 @@ const CheckboxAll = React.forwardRef<unknown, CheckboxAllProps>((props, ref) => 
     onChange,
     ...rest
   } = props
+
+  const [disable, setDisable] = useState(disabled)
+  const [inv, setInv] = useState(invalid)
   const [check, setCheck] = useState(checked)
   const currentRef = (ref as any) || React.createRef<HTMLElement>()
   const classes = classNames(
@@ -66,9 +70,51 @@ const CheckboxAll = React.forwardRef<unknown, CheckboxAllProps>((props, ref) => 
     }
   }
 
+  const allChange = () => {
+    const checkboxList = document.getElementsByName(name)
+    let child: CheckboxInputProps
+    let enable, disabled
+
+    for(let i = 0; i < checkboxList.length; i++) {
+      child = checkboxList[i]
+      if (!(child.disabled || child.getAttribute('data-invalid') === 'true')) {
+        enable = true
+        break
+      }
+    }
+
+    for(let i = 0; i < checkboxList.length; i++) {
+      child = checkboxList[i]
+      if (child.disabled) {
+        disabled = true
+        break
+      }
+    }
+
+    if (!enable) {
+      if (disabled) {
+        setDisable(true)
+      } else {
+        setInv(true)
+      }
+    }
+  }
+
   useEffect(() => {
+    allChange()
     setCheck(checked)
   }, [checked])
+
+  useEffect(() => {
+    allChange()
+    setDisable(disabled)
+  }, [disabled])
+
+  useEffect(() => {
+    setInv(invalid)
+  }, [invalid])
+
+  useMount(allChange)
 
   return (
     <InternalCheckbox
@@ -76,6 +122,8 @@ const CheckboxAll = React.forwardRef<unknown, CheckboxAllProps>((props, ref) => 
       className={classes}
       name={`cd-checkbox-all-${name}`}
       label={label}
+      disabled={disable}
+      invalid={inv}
       {...rest}
       onChange={handleChange}
     />
