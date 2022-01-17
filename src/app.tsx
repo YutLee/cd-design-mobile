@@ -6,6 +6,7 @@ import SwitchDemo from './switch/demo/demo1'
 import GridDemo from './grid/demo/demo1'
 import BadgeDemo from './badge/demo/demo1'
 import CheckboxDemo from './checkbox/demo/demo1'
+import RadioDemo from './radio/demo/demo1'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <BadgeDemo />
       <h4>Checkbox 复选框</h4>
       <CheckboxDemo />
+      <h4>Radio 单选框</h4>
+      <RadioDemo />
     </div>
   )
 }
