@@ -1,6 +1,6 @@
 import { SVGInjector } from '@tanem/svg-injector'
 import classNames from 'classnames'
-import React, { useEffect, useRef } from 'react'
+import { createRef, forwardRef, MouseEvent, MouseEventHandler, MutableRefObject, TouchEventHandler, useEffect, useRef } from 'react'
 import { ComponentSizeType } from '../utils/type'
 import './index.css'
 
@@ -11,10 +11,10 @@ type IconType = {
   childFill?: string[]
   color?: 'inherit'
   size?: ComponentSizeType | number
-  onClick?: React.MouseEventHandler<HTMLElement>
+  onClick?: () => void
 }
 
-const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
+const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
   const {
     className,
     src = '',
@@ -22,6 +22,7 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
     childFill = [],
     color = '',
     size = 'm',
+    onClick,
     ...rest
   } = props
   const style = typeof size === 'number' ? {width: `${size}px`, height: `${size}px`} : {}
@@ -34,7 +35,9 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
     },
     className
   )
-  const iconRef = (ref as any) || React.createRef<HTMLElement>()
+  const iconRef = (ref as any) || createRef<HTMLElement>()
+  const mousetRef: MutableRefObject<boolean> = useRef(false)
+  const touchRef: MutableRefObject<boolean> = useRef(false)
 
   useEffect(() => {
     const inner = document.createElement('span')
@@ -87,8 +90,47 @@ const Icon = React.forwardRef<unknown, IconType>((props: IconType, ref) => {
     })
   }, [src, fill, childFill, color])
 
+  /**
+   * @param event
+   * 因为加了svg关系，导致 input 在 focus 的时候，click 事件没有响应
+   * 所以暂时用 mountdown 和 mouseup 模拟 click 事件
+   */
+  const handleMountDown: MouseEventHandler<HTMLElement> = () => {
+    if (!touchRef.current) {
+      mousetRef.current = true
+    }
+  }
+
+  const handleMountUp: MouseEventHandler<HTMLElement> = () => {
+    if (mousetRef.current) {
+      onClick?.()
+    }
+    mousetRef.current = false
+  }
+
+  const handleTouchStart: TouchEventHandler<HTMLElement> = () => {
+    touchRef.current = true
+  }
+
+  const handleTouchEnd: TouchEventHandler<HTMLElement> = () => {
+    if (touchRef.current) {
+      onClick?.()
+    }
+    touchRef.current = false
+  }
+
   return (
-    <span data-src={src} ref={iconRef} className={classes} style={style} {...rest}></span>
+    <span
+      data-src={src}
+      ref={iconRef}
+      className={classes}
+      style={style}
+      onMouseDown={handleMountDown}
+      onMouseUp={handleMountUp}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      {...rest}
+    ></span>
   )
 })
 

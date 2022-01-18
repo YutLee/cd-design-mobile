@@ -1,0 +1,118 @@
+:root {
+  --cd-input-s: 40px;
+  --cd-input-m: 48px;
+  --cd-input-l: 56px;
+  --cd-input-font-s: 12px;
+  --cd-input-font-m: 14px;
+  --cd-input-font-l: 16px;
+}
+
+.cd-input, .cd-input.cd-input-wrapper input {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  color: var(--cd-text-color);
+  font-size: var(--cd-text-size);
+  border: none;
+  transition: all .3s;
+}
+
+.cd-input.cd-input-borderless, .cd-input.cd-input-borderless:focus, .cd-input.cd-input-borderless.cd-input-focused {
+  border: none;
+  box-shadow: none;
+}
+
+.cd-input {
+  padding: var(--cd-space-m) var(--cd-space-l);
+  border: 1px solid var(--cd-border-color);
+  border-radius: var(--cd-radius-s);
+  background-color: var(--cd-white-color);
+  background-image: none;
+  height: var(--cd-input-m);
+
+  &.cd-input-s {
+    height: var(--cd-input-s);
+  }
+
+  &.cd-input-l {
+    height: var(--cd-input-l);
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: #bfbfbf;
+    user-select: none;
+  }
+
+  &::placeholder {
+    color: #bfbfbf;
+    user-select: none;
+  }
+
+  &:-moz-placeholder-shown {
+    text-overflow: ellipsis;
+  }
+
+  &:-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    border-color: var(--cd-primary-hover-color);
+    border-right-width: 1px!important;
+  }
+
+  &:focus, &.cd-input-focused {
+    border-color: var(--cd-primary-hover-color);
+    box-shadow: 0 0 0 2px var(--cd-primary-outline-color);
+    outline: 0;
+  }
+
+  &[disabled], &.cd-input-disabled {
+    color: var(--cd-disabled-color);
+    background-color: var(--cd-bg-color);
+    border-color: #d9d9d9;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+
+  &.cd-input-wrapper {
+    display: inline-flex;
+    align-items: center;
+
+    & input {
+      padding: 0;
+      flex: 1;
+    }
+
+    & input:focus {
+      outline: 0;
+    }
+
+    & .c-input-close-icon, & .c-input-eye-icon {
+      color: var(--cd-bg-gray-color);
+      margin-left: var(--cd-space-l);
+      cursor: pointer;
+    }
+
+    & .cd-input-suffix, & .c-input-count {
+      margin-left: var(--cd-space-l);
+    }
+
+    & .cd-input-prefix {
+      margin-right: var(--cd-space-l);
+    }
+  }
+}
+
