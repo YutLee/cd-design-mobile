@@ -112,7 +112,7 @@ const Textarea = forwardRef<unknown, TextareaProps>((props, ref) => {
         )
       }
       {
-        autoSize !== undefined &&
+        autoSize &&
           <div className="c-textarea-hidden" ref={hiddenRef}></div>
       }
     </span>

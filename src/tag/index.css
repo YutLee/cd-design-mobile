@@ -1,0 +1,110 @@
+:root {
+  --cd-tag-s: 16px;
+  --cd-tag-m: 20px;
+}
+
+.cd-tag {
+  box-sizing: border-box;
+  height: var(--cd-tag-m);
+  line-height: var(--cd-tag-text-line-height);
+  font-size: var(--cd-tag-text-size);
+  display: inline-block;
+  border-radius: var(--cd-radius-m);
+  color: var(--cd-secondary-text-color);
+  border: 1px solid var(--cd-secondary-text-color);
+  padding: var(--cd-space-s) var(--cd-space-m);
+  background-color: var(--cd-white-color);
+  white-space: nowrap;
+  min-width: var(--cd-tag-m);
+  vertical-align: top;
+
+  &.cd-tag-s {
+    height: var(--cd-tag-s);
+    border-radius: var(--cd-radius-s);
+    padding: 0 var(--cd-space-m);
+  }
+
+  &.cd-tag-circle {
+    border-radius: 50%;
+
+    &.cd-tag-s {
+      min-width: var(--cd-tag-s);
+      padding: 0 var(--cd-space-s);
+    }
+  }
+
+  &.cd-tag-round {
+    border-radius: var(--cd-tag-m);
+    padding: var(--cd-space-s) calc(var(--cd-space-s) + var(--cd-space-m));
+
+    &.cd-tag-s {
+      padding: 0 var(--cd-space-m);
+    }
+  }
+
+  & .cd-tag-close-icon {
+    color: var(--cd-bg-gray-color);
+    margin-left: var(--cd-space-m);
+    cursor: pointer;
+    width: var(--cd-secondary-text-size);
+    height: var(--cd-secondary-text-size);
+    vertical-align: -1px;
+  }
+
+  & .cd-tag-icon {
+    margin-right: var(--cd-space-m);
+    width: var(--cd-secondary-text-size);
+    height: var(--cd-secondary-text-size);
+    vertical-align: -1px;
+  }
+
+  &.cd-tag-coupon {
+    border-radius: var(--cd-radius-s);
+    position: relative;
+    padding-left: var(--cd-space-l);
+    padding-right: var(--cd-space-l);
+    /* background: radial-gradient(circle at right center, transparent 3px, #f00 3px, #f00 100%, transparent 100%); */
+    /* clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 35%,
+      calc(100% - 3px) 35%,
+      calc(100% - 3px) 65%,
+      100% 65%,
+      100% 100%,
+      0% 100%,
+      0% 65%,
+      5px 65%,
+      5px 35%,
+      0 35%
+    ); */
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      width: 4px;
+      height: 4px;
+      margin-top: -3px;
+      border-radius: 50%;
+      border: 1px solid var(--cd-secondary-text-color);
+      background-color: #fff;
+    }
+
+    &:before {
+      left: -4px;
+      clip: rect(0, 6px, 6px, 3px);
+    }
+
+    &:after {
+      right: -4px;
+      clip: rect(0, 3px, 6px, 0);
+    }
+  }
+
+  &.cd-tag-hidden {
+    display: none;
+  }
+}
+
