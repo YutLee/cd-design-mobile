@@ -7,6 +7,7 @@ import BadgeDemo from './badge/demo/demo1'
 import CheckboxDemo from './checkbox/demo/demo1'
 import RadioDemo from './radio/demo/demo1'
 import InputDemo from './input/demo/demo1'
+import TextareaDemo from './textarea/demo/demo1'
 
 const resolvePath = (arr: Array<any>) => {
   return arr.map(item => ({
@@ -26,6 +27,7 @@ export default resolvePath([
   ['/checkbox', CheckboxDemo],
   ['/radio', RadioDemo],
   ['/input', InputDemo],
+  ['/textarea', TextareaDemo],
   // 404
   // ['*', NotFound]
 ])

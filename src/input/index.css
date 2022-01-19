@@ -32,6 +32,7 @@
   background-color: var(--cd-white-color);
   background-image: none;
   height: var(--cd-input-m);
+  line-height: var(--cd-text-line-height);
 
   &.cd-input-s {
     height: var(--cd-input-s);
@@ -79,7 +80,7 @@
   }
 
   &[disabled], &.cd-input-disabled {
-    color: var(--cd-disabled-color);
+    color: var(--cd-other-text-color);
     background-color: var(--cd-bg-color);
     border-color: #d9d9d9;
     box-shadow: none;

@@ -19,6 +19,7 @@ function App() {
         <li><Link to="/checkbox">Checkbox 复选框</Link></li>
         <li><Link to="/radio">Radio 单选框</Link></li>
         <li><Link to="/input">Input 输入框</Link></li>
+        <li><Link to="/textarea">Textarea 多行输入框</Link></li>
       </ul>
       <Routes>
         <Route path='/' element={<Index />} />
