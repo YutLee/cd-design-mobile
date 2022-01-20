@@ -1,7 +1,6 @@
 import { SVGInjector } from '@tanem/svg-injector'
 import classNames from 'classnames'
-import { createRef, forwardRef, MouseEvent, MouseEventHandler, MutableRefObject, TouchEventHandler, useEffect, useRef } from 'react'
-import { ComponentSizeType } from '../utils/type'
+import { createRef, forwardRef, MouseEventHandler, MutableRefObject, TouchEventHandler, useEffect, useRef } from 'react'
 import './index.css'
 
 type IconType = {
@@ -10,7 +9,7 @@ type IconType = {
   fill?: string
   childFill?: string[]
   color?: 'inherit'
-  size?: ComponentSizeType | number
+  size?: 's' | 'm' | 'l' | 'xl' | number
   onClick?: () => void
 }
 

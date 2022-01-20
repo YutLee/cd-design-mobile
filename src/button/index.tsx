@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react'
 import classNames from 'classnames'
-import { ComponentSizeType, AnchorTargetType } from '../utils/type'
 import './index.css'
 import '../index.css'
+
+export type AnchorTargetType = '_self' | '_blank' | '_parent' | '_top'
+export type ButtonSizeType = 's' | 'm' | 'l' | 'xl'
 
 export type ButtonProps = {
   block?: boolean
@@ -15,13 +17,13 @@ export type ButtonProps = {
   htmlType?: 'submit' | 'reset' | 'button'
   loading?: boolean
   shape?: 'default' | 'circle' | 'round'
-  size?: ComponentSizeType,
+  size?: ButtonSizeType,
   target?: AnchorTargetType
   type?: 'primary' | 'dashed' | 'link' | 'text' | 'default'
   onClick?: React.MouseEventHandler<HTMLElement>
 } & Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>
 
-const Button = React.forwardRef<unknown, ButtonProps>((props: ButtonProps, ref) => {
+const Button = React.forwardRef<unknown, ButtonProps>((props, ref) => {
   const {
     block = false,
     children,

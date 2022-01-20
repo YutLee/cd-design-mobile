@@ -11,7 +11,7 @@ export type DividerProps = {
   type?: 'horizontal' | 'vertical'
 }
 
-const Divider = React.forwardRef<unknown, DividerProps>((props: DividerProps, ref) => {
+const Divider = React.forwardRef<unknown, DividerProps>((props, ref) => {
   const {
     children,
     className = '',

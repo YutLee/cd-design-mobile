@@ -6,7 +6,6 @@ import { Icon } from '..'
 import eyeIcon from './icons/eye.svg'
 import closeEyeIcon from './icons/close-eye.svg'
 import closeIcon from './icons/close.svg'
-import { ComponentSizeType } from '../utils/type'
 
 export type InputSize = 's' | 'm' | 'l'
 export type InputChangeEventHandler = (event: ChangeEvent<HTMLInputElement>) => void
@@ -25,7 +24,7 @@ export type InputProps = {
   maxLength?: number
   count?: boolean | ((countParams: countProps) => ReactNode)
   prefix?: ReactNode
-  size?: ComponentSizeType
+  size?: InputSize
   suffix?: ReactNode
   type?: string
   value?: string
@@ -36,9 +35,7 @@ export type InputProps = {
   onPressEnter?: InputPressEnterEventHandler
 } & Omit<React.InputHTMLAttributes<any>, 'prefix' | 'size' | 'onChange'>
 
-
-
-const Input = React.forwardRef<unknown, InputProps>((props: InputProps, ref) => {
+const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
   const {
     clear = false,
     bordered = true,

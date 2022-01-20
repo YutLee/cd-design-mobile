@@ -9,6 +9,7 @@ import RadioDemo from './radio/demo/demo1'
 import InputDemo from './input/demo/demo1'
 import TextareaDemo from './textarea/demo/demo1'
 import TagDemo from './tag/demo/demo1'
+import ImageDemo from './image/demo/demo1'
 
 const resolvePath = (arr: Array<any>) => {
   return arr.map(item => ({
@@ -30,6 +31,7 @@ export default resolvePath([
   ['/input', InputDemo],
   ['/textarea', TextareaDemo],
   ['/tag', TagDemo],
+  ['/image', ImageDemo],
   // 404
   // ['*', NotFound]
 ])

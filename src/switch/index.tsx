@@ -19,7 +19,7 @@ export type SwitchProps = {
   onClick?: SwitchClickEventHandler
 }
 
-const Switch = React.forwardRef<unknown, SwitchProps>((props: SwitchProps, ref) => {
+const Switch = React.forwardRef<unknown, SwitchProps>((props, ref) => {
   const {
     checked = false,
     checkedChildren,
