@@ -1,6 +1,5 @@
 import { ReactEventHandler } from 'react'
 import Image from '..'
-import './demo1.css'
 
 export default () => {
   const handleError: ReactEventHandler<HTMLImageElement> = (event: any) => {

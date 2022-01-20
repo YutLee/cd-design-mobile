@@ -22,6 +22,7 @@ function App() {
         <li><Link to="/textarea">Textarea 多行输入框</Link></li>
         <li><Link to="/tag">Tag 标签</Link></li>
         <li><Link to="/image">Image 图片</Link></li>
+        <li><Link to="/empty">Empty 空状态</Link></li>
       </ul>
       <Routes>
         <Route path='/' element={<Index />} />

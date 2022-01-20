@@ -1,0 +1,13 @@
+.cd-empty {
+  margin: var(--cd-space-l);
+  font-size: var(--cd-text-size);
+  text-align: center;
+
+  & .cd-empty-image, & .cd-empty-description {
+    margin-bottom: var(--cd-space-l);
+  }
+
+  & .cd-empty-description {
+    color: var(--cd-other-text-color);
+  }
+}

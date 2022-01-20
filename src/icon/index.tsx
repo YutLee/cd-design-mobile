@@ -1,6 +1,6 @@
 import { SVGInjector } from '@tanem/svg-injector'
 import classNames from 'classnames'
-import { createRef, forwardRef, MouseEventHandler, MutableRefObject, TouchEventHandler, useEffect, useRef } from 'react'
+import { createRef, CSSProperties, forwardRef, MouseEventHandler, MutableRefObject, TouchEventHandler, useEffect, useRef } from 'react'
 import './index.css'
 
 type IconType = {
@@ -9,7 +9,8 @@ type IconType = {
   fill?: string
   childFill?: string[]
   color?: 'inherit'
-  size?: 's' | 'm' | 'l' | 'xl' | number
+  size?: 's' | 'm' | 'l' | 'xl' | number,
+  style?: CSSProperties
   onClick?: () => void
 }
 
@@ -21,10 +22,11 @@ const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
     childFill = [],
     color = '',
     size = 'm',
+    style,
     onClick,
     ...rest
   } = props
-  const style = typeof size === 'number' ? {width: `${size}px`, height: `${size}px`} : {}
+  const currentStyle = style !== undefined ? style : typeof size === 'number' ? {width: `${size}px`, height: `${size}px`} : {}
   const classes = classNames(
     'cd-icon',
     {
@@ -123,7 +125,7 @@ const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
       data-src={src}
       ref={iconRef}
       className={classes}
-      style={style}
+      style={currentStyle}
       onMouseDown={handleMountDown}
       onMouseUp={handleMountUp}
       onTouchStart={handleTouchStart}
