@@ -1,0 +1,17 @@
+.cd-card {
+  &.cd-card-bg {
+    background-color: var(--cd-white-color);
+  }
+
+  &.cd-card-margin {
+    margin: var(--cd-space-l);
+  }
+
+  &.cd-card-padding {
+    padding: var(--cd-space-l);
+  }
+
+  &.cd-card-radius {
+    border-radius: var(--cd-radius-l);
+  }
+}

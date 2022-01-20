@@ -23,6 +23,7 @@ function App() {
         <li><Link to="/tag">Tag 标签</Link></li>
         <li><Link to="/image">Image 图片</Link></li>
         <li><Link to="/empty">Empty 空状态</Link></li>
+        <li><Link to="/card">Card 卡片</Link></li>
       </ul>
       <Routes>
         <Route path='/' element={<Index />} />
