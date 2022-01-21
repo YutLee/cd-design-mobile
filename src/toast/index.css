@@ -1,0 +1,45 @@
+.cd-toast {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0) scale(.5);
+  word-break: break-word;
+  /*overflow: hidden;*/
+  z-index: -2;
+  opacity: 0;
+  width: 100vw;
+  text-align: center;
+
+  & .cd-toast-inner {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    display: inline-block;
+    max-width: 80%;
+  }
+
+  /* &.mt-icon {
+    .m-toast-inner {
+      border-radius: 5px;
+      width: 220px;
+      height: 100px;
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    .iconfont {
+      color: #fff;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+  } */
+
+  &.cd-toast-open {
+    z-index: 200;
+    opacity: 1;
+    transform: translate3d(0, -50%, 0) scale(1);
+    transition: all .2s ease;
+  }
+}
