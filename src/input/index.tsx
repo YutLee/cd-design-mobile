@@ -1,4 +1,4 @@
-import React, { ChangeEvent, KeyboardEvent, ReactNode, useState } from 'react'
+import React, { ChangeEvent, KeyboardEvent, KeyboardEventHandler, ReactNode, useState } from 'react'
 import classNames from 'classnames'
 import './index.css'
 import '../index.css'
@@ -10,7 +10,7 @@ import closeIcon from './icons/close.svg'
 export type InputSize = 's' | 'm' | 'l'
 export type InputChangeEventHandler = (event: ChangeEvent<HTMLInputElement>) => void
 export type InputClearEventHandler = () => void
-export type InputPressEnterEventHandler = (event: KeyboardEvent<Element>) => void
+export type InputPressEnterEventHandler = (event: KeyboardEvent<HTMLInputElement> | {currentTarget: HTMLInputElement}) => void
 type countProps = {
   count: number,
   maxLength?: number
@@ -77,7 +77,7 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
   )
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setVal(event.target.value)
+    setVal(event.currentTarget.value)
     onChange?.(event)
   }
 
@@ -100,6 +100,10 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
     setShow(!show)
   }
 
+  const handleKeyPress: KeyboardEventHandler<HTMLInputElement> = (event) => {
+    event.key === 'Enter' && onPressEnter?.(event)
+  }
+
   const countParams: countProps = {
     count: val?.length || 0,
     maxLength
@@ -107,15 +111,13 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
 
   if (wrapper) {
     return (
-      <span
-        ref={currentRef}
-        className={classes}
-      >
+      <span className={classes}>
         {
           prefix &&
             <span className="cd-input-prefix">{prefix}</span>
         }
         <input
+          ref={currentRef}
           type={type === 'password' && !show ? type : 'text'}
           maxLength={maxLength}
           disabled={disabled}
@@ -124,6 +126,7 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
           onChange={handleChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          onKeyPress={handleKeyPress}
         />
         {
           clear && val !== '' &&

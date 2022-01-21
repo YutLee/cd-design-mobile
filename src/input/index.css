@@ -1,10 +1,10 @@
 :root {
-  --cd-input-s: 40px;
-  --cd-input-m: 48px;
-  --cd-input-l: 56px;
+  --cd-input-s: 32px;
+  --cd-input-m: 40px;
+  --cd-input-l: 48px;
   --cd-input-font-s: 12px;
   --cd-input-font-m: 14px;
-  --cd-input-font-l: 16px;
+  --cd-input-font-l: 14px;
 }
 
 .cd-input, .cd-input.cd-input-wrapper input {
@@ -18,6 +18,10 @@
   font-size: var(--cd-text-size);
   border: none;
   transition: all .3s;
+
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration {
+    display: none;
+  }
 }
 
 .cd-input.cd-input-borderless, .cd-input.cd-input-borderless:focus, .cd-input.cd-input-borderless.cd-input-focused {
@@ -89,7 +93,7 @@
   }
 
   &.cd-input-wrapper {
-    display: inline-flex;
+    display: flex;
     align-items: center;
 
     & input {
@@ -113,6 +117,9 @@
 
     & .cd-input-prefix {
       margin-right: var(--cd-space-l);
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
     }
   }
 }

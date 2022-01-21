@@ -3,10 +3,18 @@
   width: 16px;
   height: 16px;
   color: #666;
-  vertical-align: top;
+  vertical-align: middle;
 
   & svg {
     vertical-align: top;
+  }
+
+  &.cd-icon-align-top {
+    vertical-align: top;
+  }
+
+  &.cd-icon-align-bottom {
+    vertical-align: bottom;
   }
 
   &.cd-icon-s {

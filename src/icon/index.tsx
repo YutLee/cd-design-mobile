@@ -9,7 +9,8 @@ type IconType = {
   fill?: string
   childFill?: string[]
   color?: 'inherit'
-  size?: 's' | 'm' | 'l' | 'xl' | number,
+  size?: 's' | 'm' | 'l' | 'xl' | number
+  align?: 'top' | 'middle' | 'bottom'
   style?: CSSProperties
   onClick?: () => void
 }
@@ -22,6 +23,7 @@ const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
     childFill = [],
     color = '',
     size = 'm',
+    align = 'middle',
     style,
     onClick,
     ...rest
@@ -32,7 +34,9 @@ const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
     {
       'cd-icon-s': size === 's',
       'cd-icon-l': size === 'l',
-      'cd-icon-xl': size === 'xl'
+      'cd-icon-xl': size === 'xl',
+      'cd-icon-align-top': align === 'top',
+      'cd-icon-align-bottom': align === 'bottom'
     },
     className
   )
