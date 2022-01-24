@@ -11,35 +11,39 @@
   text-align: center;
 
   & .cd-toast-inner {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 30px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: var(--cd-radius-xl);
     color: #fff;
-    font-size: 14px;
-    padding: 10px 15px;
+    font-size: var(--cd-h4-size);
+    line-height: var(--cd-h4-line-height);
+    padding: var(--cd-space-xl) calc(var(--cd-space-xl) * 2);
     display: inline-block;
     max-width: 80%;
-  }
 
-  /* &.mt-icon {
-    .m-toast-inner {
-      border-radius: 5px;
-      width: 220px;
-      height: 100px;
-      text-align: center;
-      padding: 24px 0;
-    }
-
-    .iconfont {
+    & .cd-icon {
       color: #fff;
-      font-size: 30px;
-      margin-bottom: 5px;
+      width: calc(var(--cd-h4-size) * 2);
+      height: calc(var(--cd-h4-size) * 2);
     }
-  } */
+  }
 
   &.cd-toast-open {
     z-index: 200;
     opacity: 1;
     transform: translate3d(0, -50%, 0) scale(1);
     transition: all .2s ease;
+  }
+
+  &.cd-toast-with-icon {
+    & .cd-toast-inner {
+      font-size: var(--cd-text-size);
+      padding: var(--cd-space-xxl) calc(var(--cd-space-xl) * 2);
+      display: inline-block;
+      max-width: 80%;
+
+      & .cd-icon {
+        margin: var(--cd-space-m) 0 var(--cd-space-l) 0;
+      }
+    }
   }
 }

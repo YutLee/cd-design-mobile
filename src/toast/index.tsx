@@ -1,24 +1,37 @@
 import ReactDOM from 'react-dom'
 import { createRef, CSSProperties, forwardRef, ReactNode, useRef, useState } from 'react'
+import { Icon } from '..'
 import classNames from 'classnames'
 import './index.css'
 import '../index.css'
+import loadingSVG from './icons/loading.svg'
+import successSVG from './icons/success.svg'
+import errorSVG from './icons/error.svg'
+
+export type ToastType = 'default' | 'loading' | 'success' | 'error'
 
 export type ToastProps = {
-  children?: ReactNode
   className?: string
+  style?: CSSProperties
+  type?: ToastType
+  duration?: number
+  icon?: ReactNode
+  loadingIcon?: ReactNode
+  successIcon?: ReactNode
+  errorIcon?: ReactNode
 }
 
 export type ToastConfigType = {
   content: ReactNode
+  type?: ToastType
   duration?: number
   icon?: ReactNode
   className?: string
-  style?: CSSProperties,
+  style?: CSSProperties
   onClose?: () => void
 }
 
-export type ToastOpenEventHandler = (content: ReactNode, duration?: number, onClose?: () => void) => void
+export type ToastOpenEventHandler = (config: ToastConfigType) => void
 
 interface CompoundedComponent
   extends React.ForwardRefExoticComponent<ToastProps & React.RefAttributes<HTMLInputElement>> {
@@ -31,31 +44,76 @@ const appRoot = document.getElementById('root') || document.body
 const InternalToast = forwardRef<unknown, ToastProps>((props, ref) => {
   const {
     className,
+    style,
+    icon,
+    type,
+    duration,
+    loadingIcon = <Icon src={loadingSVG} color="inherit" />,
+    successIcon = <Icon src={successSVG} color="inherit" />,
+    errorIcon = <Icon src={errorSVG} color="inherit" />,
     ...rest
   } = props
-  const [content, setContent] = useState<ReactNode>('')
+  const [state, setState] = useState<ToastConfigType>({
+    content: '',
+    style,
+    icon,
+    type,
+    duration
+  })
   const currentRef = (ref as any) || createRef<HTMLElement>()
-  const classes = classNames(
+  let classes = classNames(
     'cd-toast',
     {
-      'cd-toast-open': !!content
+      'cd-toast-open': !!state?.content,
+      'cd-toast-with-icon': state.type !== 'default'
     },
     className
   )
   const timer = useRef<number>()
   const el = useRef(document.createElement('div'))
 
-  const handleOpen: ToastOpenEventHandler = (content, duration = 3, onClose) => {
+  const handleOpen: ToastOpenEventHandler = (config) => {
+    const {
+      content,
+      type = props.type || 'default',
+      duration = props.duration || 3,
+      icon = props.icon,
+      className,
+      style = props.style,
+      onClose
+    } = config
+
+    classes = classNames(className)
+
     clearTimeout(timer.current)
-    setContent(content)
+    setState({
+      content,
+      style,
+      icon,
+      type,
+      duration
+    })
     appRoot?.appendChild(el.current)
 
     if (duration) {
       timer.current = setTimeout(() => {
         appRoot?.removeChild(el.current)
-        setContent('')
+        setState(prevState => ({
+          ...prevState,
+          content: ''
+        }))
         onClose?.()
       }, duration * 1000)
+    }
+
+    return () => {
+      clearTimeout(timer.current)
+      appRoot?.removeChild(el.current)
+      setState(prevState => ({
+        ...prevState,
+        content: ''
+      }))
+      onClose?.()
     }
   }
 
@@ -66,9 +124,21 @@ const InternalToast = forwardRef<unknown, ToastProps>((props, ref) => {
       <div
         ref={currentRef}
         className={classes}
+        style={state.style}
         {...rest}
       >
-        <div className="cd-toast-inner">{content}</div>
+        <div className="cd-toast-inner">
+          {
+            state.type !== 'default' && (
+              state.icon !== undefined ?
+              state.icon : state.type === 'loading' ?
+                  loadingIcon : state.type === 'success' ?
+                    successIcon : state.type === 'error' ?
+                      errorIcon : null
+            )
+          }
+          <div>{state.content}</div>
+        </div>
       </div>,
       el.current
     )
@@ -77,8 +147,8 @@ const InternalToast = forwardRef<unknown, ToastProps>((props, ref) => {
 
 export const Toast = InternalToast as CompoundedComponent
 
-const toast: ToastOpenEventHandler = (content, duration, onClose) => {
-  Toast.open(content, duration, onClose)
+const toast: ToastOpenEventHandler = (config) => {
+  Toast.open(config)
 }
 
 export default toast

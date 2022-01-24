@@ -2,11 +2,13 @@
   --cd-radius-s: 2px;
   --cd-radius-m: 4px;
   --cd-radius-l: 8px;
-  --cd-radius-xl: 16px;
+  --cd-radius-xl: 12px;
+  --cd-radius-xxl: 16px;
   --cd-space-s: 2px;
   --cd-space-m: 4px;
   --cd-space-l: 8px;
-  --cd-space-xl: 16px;
+  --cd-space-xl: 12px;
+  --cd-space-xxl: 16px;
   --cd-h2-size: 22px;
   --cd-h3-size: 18px;
   --cd-h4-size: 16px;
