@@ -8,14 +8,8 @@
 ## API
 属性 | 说明 | 类型 | 默认值
 ---|---|---|---
-content | 提示内容 | ReactNode \| config | -
-duration | 自动关闭的延时，单位秒。设为 0 时不自动关闭 | number | 3
-onClose | 关闭时触发的回调函数 | function | -
-
-`config` 对象属性如下：
-属性 | 说明 | 类型 | 默认值
----|---|---|---
 className | 自定义类名 | string | -
+type | 提示类型 | `default` \| `loading` \| `success` \| `error` | `default`
 content | 提示内容 | ReactNode | -
 duration | 自动关闭的延时，单位秒。设为 0 时不自动关闭 | number | 3
 icon | 自定义图标 | ReactNode | -
