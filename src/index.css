@@ -22,7 +22,7 @@
   --cd-secondary-text-line-height: 16px;
   --cd-tag-text-line-height: 14px;
   --cd-depth-0: 0 0 2px rgba(0, 0, 0, 0.08);
-  --cd-depth-1: 0 1px 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.08);
+  /* --cd-depth-1: 0 1px 1px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.08);
   --cd-depth-2: 0 2px 2px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.08);
   --cd-depth-3: 0 3px 3px rgba(0, 0, 0, 0.12), 0 0 3px rgba(0, 0, 0, 0.08);
   --cd-depth-4: 0 4px 4px rgba(0, 0, 0, 0.12), 0 0 4px rgba(0, 0, 0, 0.08);
@@ -30,7 +30,10 @@
   --cd-depth-6: 0 8px 8px rgba(0, 0, 0, 0.12), 0 0 8px rgba(0, 0, 0, 0.08);
   --cd-depth-7: 0 12px 12px rgba(0, 0, 0, 0.12), 0 0 12px rgba(0, 0, 0, 0.08);
   --cd-depth-8: 0 16px 16px rgba(0, 0, 0, 0.12), 0 0 16px rgba(0, 0, 0, 0.08);
-  --cd-depth-9: 0 24px 24px rgba(0, 0, 0, 0.12), 0 0 24px rgba(0, 0, 0, 0.08);
+  --cd-depth-9: 0 24px 24px rgba(0, 0, 0, 0.12), 0 0 24px rgba(0, 0, 0, 0.08); */
+  --cd-depth-4: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --cd-depth-24: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --cd-depth-yellow: 0 2px 4px rgba(250, 190, 0, 0.25);
 }
 
 html {

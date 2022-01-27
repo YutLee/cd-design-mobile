@@ -1,5 +1,4 @@
 import ActionSheetDemo from './action-sheet/demo/demo1'
-import AvatarDemo from './avatar/demo/demo1'
 import BackTopDemo from './back-top/demo/demo1'
 import BadgeDemo from './badge/demo/demo1'
 import ButtonDemo from './button/demo/demo1'
@@ -12,7 +11,6 @@ import GridDemo from './grid/demo/demo1'
 import IconDemo from './icon/demo/demo1'
 import ImageDemo from './image/demo/demo1'
 import InputDemo from './input/demo/demo1'
-import NavigationDemo from './navigation/demo/demo1'
 import NumberInputDemo from './number-input/demo/demo1'
 import RadioDemo from './radio/demo/demo1'
 import RateDemo from './rate/demo/demo1'
@@ -25,7 +23,6 @@ import TimelineDemo from './timeline/demo/demo1'
 import ToastDemo from './toast/demo/demo1'
 import ToolbarDemo from './toolbar/demo/demo1'
 import TreeDemo from './tree/demo/demo1'
-import UploadDemo from './upload/demo/demo1'
 
 const resolvePath = (arr: Array<any>) => {
   return arr.map(item => ({
@@ -37,7 +34,6 @@ const resolvePath = (arr: Array<any>) => {
 
 export default resolvePath([
   ['/action-sheet', ActionSheetDemo],
-  ['/avatar', AvatarDemo],
   ['/back-top', BackTopDemo],
   ['/badge', BadgeDemo],
   ['/button', ButtonDemo],
@@ -50,7 +46,6 @@ export default resolvePath([
   ['/icon', IconDemo],
   ['/image', ImageDemo],
   ['/input', InputDemo],
-  ['/navigation', NavigationDemo],
   ['/number-input', NumberInputDemo],
   ['/radio', RadioDemo],
   ['/rate', RateDemo],
@@ -63,7 +58,6 @@ export default resolvePath([
   ['/toast', ToastDemo],
   ['/toolbar', ToolbarDemo],
   ['/tree', TreeDemo],
-  ['/upload', UploadDemo],
   // 404
   // ['*', NotFound]
 ])

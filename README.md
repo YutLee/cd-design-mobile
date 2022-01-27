@@ -15,17 +15,15 @@
 - [x] [Empty 空状态](https://github.com/YutLee/cd-design-mobile/blob/main/src/empty/README.md)
 - [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
 - [x] [Toolbar 工具栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/toolbar/README.md)
-- [ ] [Navigation 导航栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/navigation/README.md)
 - [ ] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
-- [ ] [Upload 上传](https://github.com/YutLee/cd-design-mobile/blob/main/src/upload/README.md)
-- [ ] [Avatar 头像](https://github.com/YutLee/cd-design-mobile/blob/main/src/avatar/README.md)
 - [ ] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
 - [x] [Tabs 标签页](https://github.com/YutLee/cd-design-mobile/blob/main/src/tabs/README.md)
 - [ ] [Timeline 时间轴](https://github.com/YutLee/cd-design-mobile/blob/main/src/timeline/README.md)
 - [ ] [Tree 树形控件](https://github.com/YutLee/cd-design-mobile/blob/main/src/tree/README.md)
-- [ ] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
+- [x] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
 - [x] [Toast 消息提示](https://github.com/YutLee/cd-design-mobile/blob/main/src/toast/README.md)
-- [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/modal/README.md)
+- [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
+- [ ] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)
 - [ ] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
 - [ ] [BackTop 回到顶部](https://github.com/YutLee/cd-design-mobile/blob/main/src/back-top/README.md)
 - [ ] ~~Pagination 分页~~
@@ -57,7 +55,6 @@
 - [ ] ~~Table 表格~~
 - [ ] ~~Tooltip 文字提示~~
 - [ ] ~~Alert 警告提示~~
-- [ ] ~~Drawer 抽屉~~
 - [ ] ~~Notification 通知提醒框~~
 - [ ] ~~Popconfirm 气泡确认框~~
 - [ ] ~~Progress 进度条~~

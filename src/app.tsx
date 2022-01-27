@@ -11,7 +11,6 @@ function App() {
     <BrowserRouter>
       <ul>
         <li><Link to="/action-sheet">ActionSheet 上拉菜单</Link></li>
-        <li><Link to="/avatar">Avatar 头像</Link></li>
         <li><Link to="/back-top">BackTop 回到顶部</Link></li>
         <li><Link to="/badge">Badge 徽标</Link></li>
         <li><Link to="/button">Button 按钮</Link></li>
@@ -24,7 +23,6 @@ function App() {
         <li><Link to="/icon">Icon 图标</Link></li>
         <li><Link to="/image">Image 图片</Link></li>
         <li><Link to="/input">Input 输入框</Link></li>
-        <li><Link to="/navigation">Navigation 导航栏</Link></li>
         <li><Link to="/number-input">NumberInput 数字输入框</Link></li>
         <li><Link to="/radio">Radio 单选框</Link></li>
         <li><Link to="/rate">Rate 评分</Link></li>
@@ -37,7 +35,6 @@ function App() {
         <li><Link to="/toast">Toast 消息提示</Link></li>
         <li><Link to="/toolbar">Toolbar 工具栏</Link></li>
         <li><Link to="/tree">Tree 树形控件</Link></li>
-        <li><Link to="/upload">Upload 上传</Link></li>
       </ul>
       <Routes>
         <Route path='/' element={<Index />} />

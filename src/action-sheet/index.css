@@ -1,0 +1,90 @@
+.cd-action-sheet-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--cd-cover-color);
+  opacity: 0;
+
+  &.cd-action-sheet-mask-open {
+    z-index: 20;
+    opacity: 1;
+  }
+}
+
+.cd-action-sheet {
+  border-radius: var(--cd-radius-xl);
+  position: fixed;
+  bottom: 0;
+  left: var(--cd-space-l);
+  right: var(--cd-space-l);
+  transition: transform .2s ease;
+  word-break: break-word;
+  overflow: hidden;
+  z-index: 20;
+  transform: translate3d(0, 100%, 0) scale(1);
+
+  &.cd-action-sheet-open {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  & .cd-action-sheet-title {
+    text-align: center;
+    font-size: var(--cd-text-size);
+    color: var(--cd-secondary-text-color);
+    background-color: var(--cd-white-color);
+    line-height: var(--cd-h4-line-height);
+    padding: var(--cd-space-xl) var(--cd-space-l);
+  }
+
+  & .cd-action-sheet-content {
+    border-radius: var(--cd-radius-xl);
+    background-color: var(--cd-white-color);
+    overflow: auto;
+    max-height: 50vh;
+    margin-bottom: var(--cd-space-xl);
+    box-shadow: var(--cd-depth-24);
+
+    & .cd-action-sheet-list {
+      overflow: auto;
+      max-height: 50vh;
+    }
+
+    & .cd-action-sheet-item {
+      text-align: center;
+      font-size: var(--cd-h4-size);
+      color: var(--cd-text-color);
+      line-height: var(--cd-h4-line-height);
+      padding: var(--cd-space-xxl) var(--cd-space-l);
+      border-top: 1px solid var(--cd-border-color);
+    }
+
+    & .cd-action-sheet-not-title {
+      & .cd-action-sheet-item:first-list {
+        border-top: none;
+      }
+    }
+  }
+
+  & .cd-action-sheet-options {
+    border-top: 1px solid var(--cd-border-color);
+    display: flex;
+    flex-wrap: wrap
+  }
+
+   & .cd-action-sheet-cancel {
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: var(--cd-h4-size);
+    color: var(--cd-title-color);
+    line-height: var(--cd-h4-line-height);
+    padding: var(--cd-space-xxl) var(--cd-space-l);
+    width: 100%;
+    border-radius: var(--cd-radius-xl);
+    background-color: var(--cd-white-color);
+    box-shadow: var(--cd-depth-24);
+  }
+}

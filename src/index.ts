@@ -1,4 +1,4 @@
-// import ActionSheet from './action-sheet'
+import ActionSheet from './action-sheet'
 // import Avatar from './avatar'
 // import BackTop from './back-top'
 import Badge from './badge'
@@ -28,7 +28,7 @@ import Toolbar from './toolbar'
 // import Upload from './upload'
 
 export {
-  // ActionSheet,
+  ActionSheet,
   // Avatar,
   // BackTop,
   Badge,
