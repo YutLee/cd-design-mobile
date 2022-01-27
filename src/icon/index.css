@@ -1,7 +1,7 @@
 .cd-icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   color: #666;
   vertical-align: middle;
 
@@ -18,17 +18,17 @@
   }
 
   &.cd-icon-s {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
   }
 
   &.cd-icon-l {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 
   &.cd-icon-xl {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
   }
 }

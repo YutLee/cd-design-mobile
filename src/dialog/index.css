@@ -1,0 +1,89 @@
+.cd-dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--cd-cover-color);
+  opacity: 0;
+
+  &.cd-dialog-mask-open {
+    z-index: 30;
+    opacity: 1;
+  }
+}
+
+.cd-dialog {
+  background-color: var(--cd-white-color);
+  border-radius: var(--cd-radius-xl);
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0.5);
+  transition: transform .2s ease;
+  word-break: break-word;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+
+  &.cd-dialog-open {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    z-index: 30;
+    opacity: 1;
+  }
+
+  & .cd-dialog-title {
+    text-align: center;
+    font-size: var(--cd-h4-size);
+    font-weight: 600;
+    color: var(--cd-title-color);
+    line-height: var(--cd-h4-line-height);
+    padding: calc(var(--cd-space-xl) * 2) calc(var(--cd-space-xl) * 2) 0 calc(var(--cd-space-xl) * 2);
+  }
+
+  & .cd-dialog-content {
+    text-align: center;
+    font-size: var(--cd-h4-size);
+    color: var(--cd-text-color);
+    line-height: var(--cd-h4-line-height);
+    padding: var(--cd-space-l) calc(var(--cd-space-xl) * 2) calc(var(--cd-space-xxl) * 2) calc(var(--cd-space-xl) * 2);
+    overflow: auto;
+    max-height: 50vh;
+  }
+
+  & .cd-dialog-options {
+    border-top: 1px solid var(--cd-border-color);
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  & .cd-dialog-ok, & .cd-dialog-cancel {
+    flex: 1;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: var(--cd-h4-size);
+    font-weight: 600;
+    color: var(--cd-title-color);
+    line-height: var(--cd-h4-line-height);
+    padding: var(--cd-space-xxl) var(--cd-space-l);
+  }
+
+  & .cd-dialog-ok {
+    color: var(--cd-primary-color);
+    border-left: 1px solid var(--cd-border-color);
+
+    &.cd-dialog-ok-only {
+      border-top: 1px solid var(--cd-border-color);
+      border-left: none;
+      width: 100%;
+    }
+  }
+
+  & .cd-dialog-cancel.cd-dialog-cancel-only {
+    border-top: 1px solid var(--cd-border-color);
+    width: 100%;
+  }
+}

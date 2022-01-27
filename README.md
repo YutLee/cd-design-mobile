@@ -25,7 +25,7 @@
 - [ ] [Tree 树形控件](https://github.com/YutLee/cd-design-mobile/blob/main/src/tree/README.md)
 - [ ] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
 - [x] [Toast 消息提示](https://github.com/YutLee/cd-design-mobile/blob/main/src/toast/README.md)
-- [ ] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/modal/README.md)
+- [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/modal/README.md)
 - [ ] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
 - [ ] [BackTop 回到顶部](https://github.com/YutLee/cd-design-mobile/blob/main/src/back-top/README.md)
 - [ ] ~~Pagination 分页~~

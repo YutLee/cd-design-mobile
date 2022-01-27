@@ -5,7 +5,7 @@ import Badge from './badge'
 import Button from './button'
 import Card from './card'
 import Checkbox from './checkbox'
-// import Dialog from './dialog'
+import Dialog from './dialog'
 import Divider from './divider'
 import Empty from './empty'
 import { Row, Col } from './grid'
@@ -35,7 +35,7 @@ export {
   Button,
   Card,
   Checkbox,
-  // Dialog,
+  Dialog,
   Divider,
   Empty,
   Row,

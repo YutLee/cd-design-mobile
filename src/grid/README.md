@@ -17,5 +17,5 @@ wrap | 是否自动换行 | boolean | true
 ### Col
 属性 | 说明 | 类型 | 默认值
 ---|---|---|---
-flex | flex 布局属性 | `string` \| `number` | -
+flex | flex 布局属性 | string \| number | -
 span | 栅格占位格数，为 0 时相当于 display: none | number | -

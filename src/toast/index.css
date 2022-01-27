@@ -11,7 +11,7 @@
   text-align: center;
 
   & .cd-toast-inner {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .9);
     border-radius: var(--cd-radius-xl);
     color: #fff;
     font-size: var(--cd-h4-size);

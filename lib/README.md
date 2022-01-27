@@ -1,65 +1,68 @@
 # cd-design-mobile
 
-- [ ] [Button 按钮](https://github.com/YutLee/cd-design-mobile/blob/main/src/button/README.md)
-- [ ] Icon 图标
-- [ ] Typography 排版
-- [ ] Divider 分割线
-- [ ] Grid 栅格
-- [ ] Layout 布局
-- [ ] Space 间距
-- [ ] Affix 固钉
-- [ ] Breadcrumb 面包屑
-- [ ] Dropdown 下拉菜单
-- [ ] Menu 导航菜单
-- [ ] PageHeader 页头
-- [ ] Pagination 分页
-- [ ] Steps 步骤条
-- [ ] AutoComplete 自动完成
-- [ ] Cascader 级联选择
-- [ ] Checkbox 复选框
-- [ ] DatePicker 日期选择
-- [ ] From 表单
-- [ ] Input 输入框
-- [ ] InputNumber 数字输入框
-- [ ] Mentions 提及
-- [ ] Radio 单选框
-- [ ] Rate 评分
-- [ ] Select 选择器
-- [ ] Slider 滑动输入条
-- [ ] Switch 开关
-- [ ] TimePicker 时间选择框
-- [ ] Transfer 穿梭框
-- [ ] TreeSelect 树选择
-- [ ] Upload 上传
-- [ ] Avatar 头像
-- [ ] Badge 徽标数
-- [ ] Calendar 日历
-- [ ] Card 卡片
-- [ ] Carousel 走马灯
-- [ ] Collapse 折叠面板
-- [ ] Comment 评论
-- [ ] Descriptions 描述列表
-- [ ] Empty 空状态
-- [ ] Image 图片
-- [ ] List 列表
-- [ ] Popover 气泡卡片
-- [ ] Statistic 统计数值
-- [ ] Table 表格
-- [ ] Tabs 标签页
-- [ ] Tag 标签
-- [ ] Timeline 时间轴
-- [ ] Tooltip 文字提示
-- [ ] Tree 树形控件
-- [ ] Alert 警告提示
-- [ ] Drawer 抽屉
-- [ ] Message 全局提示
-- [ ] Modal 对话框
-- [ ] Notification 通知提醒框
-- [ ] Popconfirm 气泡确认框
-- [ ] Progress 进度条
-- [ ] Result 结果
-- [ ] Skeleton 骨架屏
-- [ ] Spin 加载中
-- [ ] Anchor 锚点
-- [ ] BackTop 回到顶部
-- [ ] ConfigProvider 全局化配置
+- [x] [Button 按钮](https://github.com/YutLee/cd-design-mobile/blob/main/src/button/README.md)
+- [x] [Icon 图标](https://github.com/YutLee/cd-design-mobile/blob/main/src/icon/README.md)
+- [x] [Divider 分割线](https://github.com/YutLee/cd-design-mobile/blob/main/src/divider/README.md)
+- [x] [Grid 栅格](https://github.com/YutLee/cd-design-mobile/blob/main/src/grid/README.md)
+- [x] [Checkbox 复选框](https://github.com/YutLee/cd-design-mobile/blob/main/src/checkbox/README.md)
+- [x] [Input 输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/input/README.md)
+- [x] [Radio 单选框](https://github.com/YutLee/cd-design-mobile/blob/main/src/radio/README.md)
+- [x] [Switch 开关](https://github.com/YutLee/cd-design-mobile/blob/main/src/switch/README.md)
+- [x] [Badge 徽标数](https://github.com/YutLee/cd-design-mobile/blob/main/src/badge/README.md)
+- [x] [Tag 标签](https://github.com/YutLee/cd-design-mobile/blob/main/src/tag/README.md)
+- [x] [Textarea 多行输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/textarea/README.md)
+- [x] [Image 图片](https://github.com/YutLee/cd-design-mobile/blob/main/src/image/README.md)
+- [x] [Empty 空状态](https://github.com/YutLee/cd-design-mobile/blob/main/src/empty/README.md)
+- [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
+- [x] [Toolbar 工具栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/toolbar/README.md)
+- [ ] [Navigation 导航栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/navigation/README.md)
+- [ ] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
+- [ ] [Upload 上传](https://github.com/YutLee/cd-design-mobile/blob/main/src/upload/README.md)
+- [ ] [Avatar 头像](https://github.com/YutLee/cd-design-mobile/blob/main/src/avatar/README.md)
+- [ ] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
+- [x] [Tabs 标签页](https://github.com/YutLee/cd-design-mobile/blob/main/src/tabs/README.md)
+- [ ] [Timeline 时间轴](https://github.com/YutLee/cd-design-mobile/blob/main/src/timeline/README.md)
+- [ ] [Tree 树形控件](https://github.com/YutLee/cd-design-mobile/blob/main/src/tree/README.md)
+- [ ] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
+- [x] [Toast 消息提示](https://github.com/YutLee/cd-design-mobile/blob/main/src/toast/README.md)
+- [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/modal/README.md)
+- [ ] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
+- [ ] [BackTop 回到顶部](https://github.com/YutLee/cd-design-mobile/blob/main/src/back-top/README.md)
+- [ ] ~~Pagination 分页~~
+- [ ] ~~List 列表~~
+- [ ] ~~Typography 排版~~
+- [ ] ~~Layout 布局~~
+- [ ] ~~Space 间距~~
+- [ ] ~~Affix 固钉~~
+- [ ] ~~Breadcrumb 面包屑~~
+- [ ] ~~Dropdown 下拉菜单~~
+- [ ] ~~Menu 导航菜单~~
+- [ ] ~~PageHeader 页头~~
+- [ ] ~~AutoComplete 自动完成~~
+- [ ] ~~Cascader 级联选择~~
+- [ ] ~~DatePicker 日期选择~~
+- [ ] ~~From 表单~~
+- [ ] ~~Mentions 提及~~
+- [ ] ~~Slider 滑动输入条~~
+- [ ] ~~TimePicker 时间选择框~~
+- [ ] ~~Transfer 穿梭框~~
+- [ ] ~~TreeSelect 树选择~~
+- [ ] ~~Calendar 日历~~
+- [ ] ~~Carousel 走马灯~~
+- [ ] ~~Collapse 折叠面板~~
+- [ ] ~~Comment 评论~~
+- [ ] ~~Descriptions 描述列表~~
+- [ ] ~~Popover 气泡卡片~~
+- [ ] ~~Statistic 统计数值~~
+- [ ] ~~Table 表格~~
+- [ ] ~~Tooltip 文字提示~~
+- [ ] ~~Alert 警告提示~~
+- [ ] ~~Drawer 抽屉~~
+- [ ] ~~Notification 通知提醒框~~
+- [ ] ~~Popconfirm 气泡确认框~~
+- [ ] ~~Progress 进度条~~
+- [ ] ~~Result 结果~~
+- [ ] ~~Skeleton 骨架屏~~
+- [ ] ~~Spin 加载中~~
+- [ ] ~~Anchor 锚点~~
+- [ ] ~~ConfigProvider 全局化配置~~
