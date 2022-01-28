@@ -7,6 +7,7 @@ import Card from './card'
 import Checkbox from './checkbox'
 import Dialog from './dialog'
 import Divider from './divider'
+import Drawer from './drawer'
 import Empty from './empty'
 import { Row, Col } from './grid'
 import Icon from './icon'
@@ -24,7 +25,6 @@ import Textarea from './textarea'
 // import Timeline from './timeline'
 import Toast from './toast'
 import Toolbar from './toolbar'
-// import Tree from './tree'
 // import Upload from './upload'
 
 export {
@@ -37,6 +37,7 @@ export {
   Checkbox,
   Dialog,
   Divider,
+  Drawer,
   Empty,
   Row,
   Col,
@@ -55,6 +56,5 @@ export {
   // Timeline,
   Toast,
   Toolbar,
-  // Tree,
   // Upload,
 }

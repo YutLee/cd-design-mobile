@@ -6,6 +6,7 @@ import CardDemo from './card/demo/demo1'
 import CheckboxDemo from './checkbox/demo/demo1'
 import DialogDemo from './dialog/demo/demo1'
 import DividerDemo from './divider/demo/demo1'
+import DrawerDemo from './drawer/demo/demo1'
 import EmptyDemo from './empty/demo/demo1'
 import GridDemo from './grid/demo/demo1'
 import IconDemo from './icon/demo/demo1'
@@ -22,7 +23,6 @@ import TextareaDemo from './textarea/demo/demo1'
 import TimelineDemo from './timeline/demo/demo1'
 import ToastDemo from './toast/demo/demo1'
 import ToolbarDemo from './toolbar/demo/demo1'
-import TreeDemo from './tree/demo/demo1'
 
 const resolvePath = (arr: Array<any>) => {
   return arr.map(item => ({
@@ -41,6 +41,7 @@ export default resolvePath([
   ['/checkbox', CheckboxDemo],
   ['/dialog', DialogDemo],
   ['/divider', DividerDemo],
+  ['/drawer', DrawerDemo],
   ['/empty', EmptyDemo],
   ['/grid', GridDemo],
   ['/icon', IconDemo],
@@ -57,7 +58,6 @@ export default resolvePath([
   ['/timeline', TimelineDemo],
   ['/toast', ToastDemo],
   ['/toolbar', ToolbarDemo],
-  ['/tree', TreeDemo],
   // 404
   // ['*', NotFound]
 ])

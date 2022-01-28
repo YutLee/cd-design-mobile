@@ -20,6 +20,7 @@ export type ActionSheetProps = {
   title?: ReactNode
   dataSource?: ActionSheetItemProps[]
   cancelText?: string
+  maskClosable?: boolean
   onItemClick?: (data: ActionSheetItemProps, close: ActionSheetCloseEventHandler) => void
   onCancel?: (close: ActionSheetCloseEventHandler) => void
 }
@@ -33,9 +34,10 @@ const ActionSheet = forwardRef<unknown, ActionSheetProps>((props, ref) => {
     idx = 0,
     cancelText = '取消',
     dataSource,
+    maskClosable = true,
     ...rest
   } = props
-  const [state, setState] = useState<ActionSheetProps>({idx, cancelText, dataSource, ...rest})
+  const [state, setState] = useState<ActionSheetProps>({idx, cancelText, dataSource, maskClosable, ...rest})
   const [open, setOpen] = useState<Boolean>(false)
   const currentRef = (ref as any) || createRef<HTMLElement>()
   let classes = classNames(
@@ -68,6 +70,10 @@ const ActionSheet = forwardRef<unknown, ActionSheetProps>((props, ref) => {
     }
   }
 
+  const handleMaskClick = () => {
+    state.maskClosable && handleClose()
+  }
+
   const update: ActionSheetOpenEventHandler = (config) => {
     setState(prevState => ({
       ...prevState,
@@ -83,7 +89,7 @@ const ActionSheet = forwardRef<unknown, ActionSheetProps>((props, ref) => {
 
   return (
     <>
-      <div className={classNames('cd-action-sheet-mask', {'cd-action-sheet-mask-open': open})}></div>
+      <div className={classNames('cd-action-sheet-mask', {'cd-action-sheet-mask-open': open})} onClick={handleMaskClick}></div>
       <div
         ref={currentRef}
         className={classes}
