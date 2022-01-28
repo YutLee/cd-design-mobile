@@ -18,6 +18,7 @@ function App() {
         <li><Link to="/checkbox">Checkbox 复选框</Link></li>
         <li><Link to="/dialog">Dialog 对话框</Link></li>
         <li><Link to="/divider">Divider 分割线</Link></li>
+        <li><Link to="/drawer">Drawer 抽屉</Link></li>
         <li><Link to="/empty">Empty 空状态</Link></li>
         <li><Link to="/grid">Grid 栅格</Link></li>
         <li><Link to="/icon">Icon 图标</Link></li>
@@ -34,7 +35,6 @@ function App() {
         <li><Link to="/timeline">Timeline 时间轴</Link></li>
         <li><Link to="/toast">Toast 消息提示</Link></li>
         <li><Link to="/toolbar">Toolbar 工具栏</Link></li>
-        <li><Link to="/tree">Tree 树形控件</Link></li>
       </ul>
       <Routes>
         <Route path='/' element={<Index />} />

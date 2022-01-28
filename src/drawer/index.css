@@ -1,0 +1,108 @@
+.cd-drawer-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--cd-cover-color);
+  opacity: 0;
+
+  &.cd-drawer-mask-open {
+    z-index: 20;
+    opacity: 1;
+  }
+}
+
+.cd-drawer {
+  background-color: var(--cd-white-color);
+  position: fixed;
+  transition: transform .2s ease;
+  word-break: break-word;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  box-shadow: var(--cd-depth-24);
+
+  &.cd-drawer-top {
+    border-radius: 0 0 var(--cd-radius-xl) var(--cd-radius-xl);
+    transform: translate3d(0, -100%, 0) scale(1);
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.cd-drawer-right {
+    border-radius: var(--cd-radius-xl) 0 0 var(--cd-radius-xl);
+    transform: translate3d(100%, 0, 0) scale(1);
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    right: 0;
+  }
+
+  &.cd-drawer-bottom {
+    border-radius: var(--cd-radius-xl) var(--cd-radius-xl) 0 0;
+    transform: translate3d(0, 100%, 0) scale(1);
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.cd-drawer-left {
+    border-radius: 0 var(--cd-radius-xl) var(--cd-radius-xl) 0;
+    transform: translate3d(-100%, 0, 0) scale(1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 10%;
+  }
+
+  &.cd-drawer-open {
+    transform: translate3d(0, 0, 0) scale(1);
+    z-index: 21;
+    opacity: 1;
+  }
+
+  & .cd-drawer-title {
+    text-align: center;
+    font-size: var(--cd-h4-size);
+    font-weight: 600;
+    color: var(--cd-title-color);
+    height: var(--cd-h4-line-height);
+    padding: var(--cd-space-xl);
+    position: static;
+
+    & h3 {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: var(--cd-h3-size);
+      line-height: var(--cd-h4-line-height);
+      position: absolute;
+      left: calc(var(--cd-space-xl) * 4);
+      right: calc(var(--cd-space-xl) * 4);
+      top: var(--cd-space-xl);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  & .cd-drawer-close {
+    padding: var(--cd-space-xl) var(--cd-space-xxl);
+
+    & .cd-icon {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  & .cd-drawer-content {
+    font-size: var(--cd-text-size);
+    color: var(--cd-text-color);
+    line-height: var(--cd-h4-line-height);
+    overflow: auto;
+    max-height: 50vh;
+  }
+}
