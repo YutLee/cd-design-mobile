@@ -14,7 +14,7 @@ import Icon from './icon'
 import Image from './image'
 import Input from './input'
 // import Navigation from './navigation'
-// import NumberInput from './number-input'
+import NumberInput from './number-input'
 import Radio from './radio'
 // import Rate from './rate'
 // import Steps from './steps'
@@ -45,7 +45,7 @@ export {
   Image,
   Input,
   // Navigation,
-  // NumberInput,
+  NumberInput,
   Radio,
   // Rate,
   // Steps,

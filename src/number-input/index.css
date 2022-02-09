@@ -1,0 +1,101 @@
+.cd-number-input-wrapper {
+  box-sizing: border-box;
+  display: inline-flex;
+
+  & .cd-number-input-minus, & .cd-number-input-plus {
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    border-radius: var(--cd-radius-m);
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    user-select: none;
+
+    & .cd-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  & .cd-number-input-minus {
+    border: 1px solid var(--cd-border-color);
+
+    &:active {
+      background-color: var(--cd-inner-bg-color);
+    }
+
+    &.cd-number-input-minus-disabled {
+      background-color: var(--cd-disabled-color);
+      border-color: var(--cd-disabled-color);
+
+      & .cd-icon {
+        color: var(--cd-other-text-color);
+      }
+    }
+  }
+
+  & .cd-number-input-plus {
+    background-color: var(--cd-primary-color);
+    border: 1px solid var(--cd-primary-color);
+
+    &:active {
+      background-color: var(--cd-primary-hover-color);
+      border-color: var(--cd-primary-hover-color);
+    }
+
+    &.cd-number-input-plus-disabled {
+      background-color: var(--cd-disabled-color);
+      border-color: var(--cd-disabled-color);
+
+      & .cd-icon {
+        color: var(--cd-other-text-color);
+      }
+    }
+  }
+
+  & .cd-number-input {
+    background-color: var(--cd-white-color);
+    border-radius: var(--cd-radius-m);
+    margin: 0 var(--cd-space-s);
+    width: 48px;
+    padding: var(--cd-space-s);
+    box-sizing: border-box;
+    height: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  & .cd-number-input-inner {
+    box-sizing: border-box;
+    outline: none;
+    display: inline-block;
+    border: none;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background: none;
+    font-size: var(--cd-text-size);
+    color: var(--cd-title-color);
+    height: 24px;
+    line-height: 24px;
+    padding: 0;
+
+    &.cd-number-input-caret {
+      caret-color: transparent;
+    }
+  }
+
+  & .cd-number-input-double {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+    text-align: center;
+    font-size: var(--cd-text-size);
+    color: var(--cd-title-color);
+    line-height: 24px;
+    background-color: #b4d8fd;
+  }
+}

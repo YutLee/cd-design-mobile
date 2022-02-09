@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <ul>
         <li><Link to="/action-sheet">ActionSheet 上拉菜单</Link></li>
-        <li><Link to="/back-top">BackTop 回到顶部</Link></li>
+        {/* <li><Link to="/back-top">BackTop 回到顶部</Link></li> */}
         <li><Link to="/badge">Badge 徽标</Link></li>
         <li><Link to="/button">Button 按钮</Link></li>
         <li><Link to="/card">Card 卡片</Link></li>

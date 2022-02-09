@@ -1,5 +1,5 @@
 import ActionSheetDemo from './action-sheet/demo/demo1'
-import BackTopDemo from './back-top/demo/demo1'
+// import BackTopDemo from './back-top/demo/demo1'
 import BadgeDemo from './badge/demo/demo1'
 import ButtonDemo from './button/demo/demo1'
 import CardDemo from './card/demo/demo1'
@@ -34,7 +34,7 @@ const resolvePath = (arr: Array<any>) => {
 
 export default resolvePath([
   ['/action-sheet', ActionSheetDemo],
-  ['/back-top', BackTopDemo],
+  // ['/back-top', BackTopDemo],
   ['/badge', BadgeDemo],
   ['/button', ButtonDemo],
   ['/card', CardDemo],

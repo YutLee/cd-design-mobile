@@ -1,5 +1,4 @@
 # cd-design-mobile
-
 - [x] [Button 按钮](https://github.com/YutLee/cd-design-mobile/blob/main/src/button/README.md)
 - [x] [Icon 图标](https://github.com/YutLee/cd-design-mobile/blob/main/src/icon/README.md)
 - [x] [Divider 分割线](https://github.com/YutLee/cd-design-mobile/blob/main/src/divider/README.md)
@@ -15,7 +14,7 @@
 - [x] [Empty 空状态](https://github.com/YutLee/cd-design-mobile/blob/main/src/empty/README.md)
 - [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
 - [x] [Toolbar 工具栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/toolbar/README.md)
-- [ ] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
+- [x] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
 - [ ] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
 - [x] [Tabs 标签页](https://github.com/YutLee/cd-design-mobile/blob/main/src/tabs/README.md)
 - [ ] [Timeline 时间轴](https://github.com/YutLee/cd-design-mobile/blob/main/src/timeline/README.md)
@@ -24,7 +23,7 @@
 - [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
 - [x] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)
 - [ ] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
-- [ ] [BackTop 回到顶部](https://github.com/YutLee/cd-design-mobile/blob/main/src/back-top/README.md)
+- [ ] ~~[BackTop 回到顶部]~~
 - [ ] ~~Tree 树形控件~~
 - [ ] ~~Pagination 分页~~
 - [ ] ~~List 列表~~
