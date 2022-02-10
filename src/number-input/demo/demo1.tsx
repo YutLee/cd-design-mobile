@@ -24,8 +24,12 @@ export default () => {
       <div>
         <h4>简单展示</h4>
         <NumberInput onChange={handleChange} onStep={handleSetp} />
-        <h4>step = 3</h4>
-        <NumberInput value={5} step={3} onChange={handleChange} onStep={handleSetp} />
+        <h4>大尺寸</h4>
+        <NumberInput size="l" onChange={handleChange} onStep={handleSetp} />
+        <h4>圆形按钮</h4>
+        <NumberInput size="l" shape="circle" onChange={handleChange} onStep={handleSetp} />
+        <h4>step = 3, min = 1, max = 9</h4>
+        <NumberInput step={3} min={1} max={9} onChange={handleChange} onStep={handleSetp} />
         <h4>延迟</h4>
         <NumberInput value={value} onChange={handleChange} onStep={handleSetp} />
         <h4>禁用</h4>

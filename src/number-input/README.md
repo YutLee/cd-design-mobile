@@ -11,6 +11,8 @@ max | 最大值 | number | 999999
 min | 最小值 | number | 0
 defaultValue | 输入框默认内容 | number | 0
 disabled | 是否禁用 | boolean | false
+shape | 形状 | `round` \| `circle` | `round`
+size | 大小 | `m` \| `l` | `m`
 step | 每次改变步数，大于0的整数 | number | 1
 value | 输入框内容 | number | -
 editable | 是否可编辑 | boolean | true

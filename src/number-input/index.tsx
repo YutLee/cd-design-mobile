@@ -15,6 +15,8 @@ export type InputProps = {
   min?: number
   defaultValue?: number
   disabled?: boolean
+  shape?: 'round' | 'circle'
+  size?: 'm' | 'l'
   step?: number
   value?: number
   editable?: boolean
@@ -30,20 +32,26 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
     defaultValue = 0,
     value,
     disabled = false,
+    shape = 'round',
+    size = 'm',
     step = 1,
     editable = true,
     onChange,
     onStep,
     ...rest
   } = props
-  const [val, setVal] = useState<number | string>(typeof value === 'undefined' ? defaultValue : value)
+  const init = typeof value === 'undefined' ? defaultValue : value
+  const [val, setVal] = useState<number | string>(init > max ? max : init < min ? min : init)
   const currentValueRef = useRef<string | number>(val)
   const [isFocus, setIsFocus] = useState(false)
   const currentRef = (ref as any) || React.createRef<HTMLElement>()
   const classes = classNames(
     'cd-number-input-wrapper',
     {
-      'cd-number-input-disabled': disabled
+      'cd-number-input-circle': shape === 'circle',
+      'cd-number-input-disabled': disabled,
+      'cd-number-input-l': size === 'l',
+      'cd-number-input-s-font': isFocus ? currentValueRef.current.toString().length > 4 : val.toString().length > 4
     },
     className
   )
@@ -63,9 +71,14 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
     }
   }
 
-  const handleClick = () => {
+  const handleFocus = () => {
     setVal('')
     setIsFocus(true)
+  }
+
+  const handleBlur = () => {
+    setVal(currentValueRef.current)
+    setIsFocus(false)
   }
 
   const handleStepClick = (type: 'up' | 'down') => {
@@ -80,10 +93,15 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
   }
 
   useEffect(() => {
+    let current
     if (typeof value === 'undefined' && (typeof defaultValue === 'string' || typeof defaultValue === 'number')) {
-      setVal(defaultValue)
+      current = defaultValue > max ? max : defaultValue < min ? min : defaultValue
+      setVal(current)
+      currentValueRef.current = current
     } else if (typeof value === 'string' || typeof value === 'number') {
-      setVal(value)
+      current = value > max ? max : value < min ? min : value
+      setVal(current)
+      currentValueRef.current = current
     }
   }, [value, defaultValue])
 
@@ -93,7 +111,7 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
       ref={currentRef}
     >
       <Col
-        className={classNames('cd-number-input-minus', {'cd-number-input-minus-disabled': disabled || val <= min})}
+        className={classNames('cd-number-input-minus', {'cd-number-input-minus-disabled': disabled || (val !== '' && val <= min)})}
         onClick={handleStepClick.bind(this, 'down')}
       >
         <Icon src={minusIcon} size="s" color="inherit" />
@@ -104,7 +122,8 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
           type="number"
           value={val}
           className={classNames('cd-number-input-inner', {'cd-number-input-caret': isFocus})}
-          onClick={handleClick}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
