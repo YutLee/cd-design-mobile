@@ -15,7 +15,7 @@
 - [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
 - [x] [Toolbar 工具栏](https://github.com/YutLee/cd-design-mobile/blob/main/src/toolbar/README.md)
 - [x] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
-- [ ] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
+- [x] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
 - [x] [Tabs 标签页](https://github.com/YutLee/cd-design-mobile/blob/main/src/tabs/README.md)
 - [x] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
 - [x] [Toast 消息提示](https://github.com/YutLee/cd-design-mobile/blob/main/src/toast/README.md)

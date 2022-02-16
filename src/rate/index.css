@@ -1,0 +1,43 @@
+.cd-rate {
+  display: inline-block;
+  line-height: 1;
+
+  &.cd-rate-disabled {
+
+  }
+
+  & .cd-rate-item {
+    display: inline-block;
+    margin-right: var(--cd-space-l);
+    padding: 1px;
+    line-height: 1;
+    vertical-align: top;
+    font-size: 0;
+    /* color: var(--cd-other-text-color); */
+    fill: var(--cd-other-text-color);
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    & .cd-icon {
+      width: 14px;
+      height: 14px;
+      vertical-align: top;
+      color: inherit;
+    }
+
+    & .cd-rate-item-half {
+      position: absolute;
+      width: calc(50% - 1px);
+      overflow: hidden;
+    }
+
+    & .cd-rate-item-active {
+      /* color: var(--cd-other-text-color); */
+      fill: var(--cd-primary-color);
+    }
+  }
+}
+

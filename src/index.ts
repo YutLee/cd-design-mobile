@@ -16,7 +16,7 @@ import Input from './input'
 // import Navigation from './navigation'
 import NumberInput from './number-input'
 import Radio from './radio'
-// import Rate from './rate'
+import Rate from './rate'
 import Steps from './steps'
 import Switch from './switch'
 import Tabs, { TabPanel } from './tabs'
@@ -47,7 +47,7 @@ export {
   // Navigation,
   NumberInput,
   Radio,
-  // Rate,
+  Rate,
   Steps,
   Switch,
   Tabs,
