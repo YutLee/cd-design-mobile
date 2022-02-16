@@ -17,9 +17,9 @@ import Input from './input'
 import NumberInput from './number-input'
 import Radio from './radio'
 // import Rate from './rate'
-// import Steps from './steps'
+import Steps from './steps'
 import Switch from './switch'
-import Tabs from './tabs'
+import Tabs, { TabPanel } from './tabs'
 import Tag from './tag'
 import Textarea from './textarea'
 // import Timeline from './timeline'
@@ -48,9 +48,10 @@ export {
   NumberInput,
   Radio,
   // Rate,
-  // Steps,
+  Steps,
   Switch,
   Tabs,
+  TabPanel,
   Tag,
   Textarea,
   // Timeline,

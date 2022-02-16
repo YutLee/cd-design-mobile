@@ -17,12 +17,12 @@
 - [x] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
 - [ ] [Rate 评分](https://github.com/YutLee/cd-design-mobile/blob/main/src/rate/README.md)
 - [x] [Tabs 标签页](https://github.com/YutLee/cd-design-mobile/blob/main/src/tabs/README.md)
-- [ ] [Timeline 时间轴](https://github.com/YutLee/cd-design-mobile/blob/main/src/timeline/README.md)
 - [x] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
 - [x] [Toast 消息提示](https://github.com/YutLee/cd-design-mobile/blob/main/src/toast/README.md)
 - [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
 - [x] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)
-- [ ] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
+- [x] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
+- [ ] ~~[Timeline 时间轴]~~
 - [ ] ~~[BackTop 回到顶部]~~
 - [ ] ~~Tree 树形控件~~
 - [ ] ~~Pagination 分页~~
