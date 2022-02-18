@@ -15,6 +15,7 @@ import InputDemo from './input/demo/demo1'
 import NumberInputDemo from './number-input/demo/demo1'
 import RadioDemo from './radio/demo/demo1'
 import RateDemo from './rate/demo/demo1'
+import SearchBarDemo from './search-bar/demo/demo1'
 import StepsDemo from './steps/demo/demo1'
 import SwitchDemo from './switch/demo/demo1'
 import TabsDemo from './tabs/demo/demo1'
@@ -27,37 +28,38 @@ import ToolbarDemo from './toolbar/demo/demo1'
 const resolvePath = (arr: Array<any>) => {
   return arr.map(item => ({
     path: item[0],
-    component: item[1],
-    private: item[2]
+    title: item[1],
+    component: item[2]
   }))
 }
 
 export default resolvePath([
-  ['/action-sheet', ActionSheetDemo],
+  ['/action-sheet', 'ActionSheet 上拉菜单', ActionSheetDemo],
   // ['/back-top', BackTopDemo],
-  ['/badge', BadgeDemo],
-  ['/button', ButtonDemo],
-  ['/card', CardDemo],
-  ['/checkbox', CheckboxDemo],
-  ['/dialog', DialogDemo],
-  ['/divider', DividerDemo],
-  ['/drawer', DrawerDemo],
-  ['/empty', EmptyDemo],
-  ['/grid', GridDemo],
-  ['/icon', IconDemo],
-  ['/image', ImageDemo],
-  ['/input', InputDemo],
-  ['/number-input', NumberInputDemo],
-  ['/radio', RadioDemo],
-  ['/rate', RateDemo],
-  ['/steps', StepsDemo],
-  ['/switch', SwitchDemo],
-  ['/tabs', TabsDemo],
-  ['/tag', TagDemo],
-  ['/textarea', TextareaDemo],
-  ['/timeline', TimelineDemo],
-  ['/toast', ToastDemo],
-  ['/toolbar', ToolbarDemo],
+  ['/badge', 'Badge 徽标', BadgeDemo],
+  ['/button', 'Button 按钮', ButtonDemo],
+  ['/card', 'Card 卡片', CardDemo],
+  ['/checkbox', 'Checkbox 复选框', CheckboxDemo],
+  ['/dialog', 'Dialog 对话框', DialogDemo],
+  ['/divider', 'Divider 分割线', DividerDemo],
+  ['/drawer', 'Drawer 抽屉', DrawerDemo],
+  ['/empty', 'Empty 空状态', EmptyDemo],
+  ['/grid', 'Grid 栅格', GridDemo],
+  ['/icon', 'Icon 图标', IconDemo],
+  ['/image', 'Image 图片', ImageDemo],
+  ['/input', 'Input 输入框', InputDemo],
+  ['/number-input', 'NumberInput 数字输入框', NumberInputDemo],
+  ['/radio', 'Radio 单选框', RadioDemo],
+  ['/rate', 'Rate 评分', RateDemo],
+  ['/search-bar', 'SearchBar 搜索栏', SearchBarDemo],
+  ['/steps', 'Steps 步骤条', StepsDemo],
+  ['/switch', 'Switch 开关', SwitchDemo],
+  ['/tabs', 'Tabs 标签页', TabsDemo],
+  ['/tag', 'Tag 标签', TagDemo],
+  ['/textarea', 'Textarea 多行输入框', TextareaDemo],
+  ['/timeline', 'Timeline 时间轴', TimelineDemo],
+  ['/toast', 'Toast 消息提示', ToastDemo],
+  ['/toolbar', 'Toolbar 工具栏', ToolbarDemo],
   // 404
   // ['*', NotFound]
 ])

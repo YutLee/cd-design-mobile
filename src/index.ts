@@ -17,6 +17,7 @@ import Input from './input'
 import NumberInput from './number-input'
 import Radio from './radio'
 import Rate from './rate'
+import SearchBar from './search-bar'
 import Steps from './steps'
 import Switch from './switch'
 import Tabs, { TabPanel } from './tabs'
@@ -48,6 +49,7 @@ export {
   NumberInput,
   Radio,
   Rate,
+  SearchBar,
   Steps,
   Switch,
   Tabs,

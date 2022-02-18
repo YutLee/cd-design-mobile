@@ -106,7 +106,7 @@
     }
 
     & .c-input-close-icon, & .c-input-eye-icon {
-      color: var(--cd-bg-gray-color);
+      fill: var(--cd-other-text-color);
       margin-left: var(--cd-space-l);
       cursor: pointer;
     }

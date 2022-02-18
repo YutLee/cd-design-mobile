@@ -1,0 +1,24 @@
+.cd-search-bar {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  & .cd-input {
+    border-radius: var(--cd-input-s);
+    flex: 1;
+
+    & .cd-input-prefix {
+      padding: 2px;
+
+      & .cd-icon {
+        fill: var(--cd-other-text-color);
+      }
+    }
+  }
+
+  & .c-search-bar-s-btn, & .c-search-bar-c-btn {
+    padding: 0 var(--cd-space-l);
+    font-size: var(--cd-text-size);
+    color: var(--cd-text-color);
+  }
+}

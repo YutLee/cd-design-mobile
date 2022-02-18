@@ -39,21 +39,27 @@
     }
   }
 
-  & .cd-toolbar-search-bar {
-    flex: 1;
-    text-align: center;
-
-    & .cd-input-prefix .cd-icon {
-      color: var(--cd-primary-color);
-    }
-  }
-
   & .cd-toolbar-back, & .cd-toolbar-search, & .cd-toolbar-suffix {
-    padding: 0 var(--cd-space-xl);
+    padding: 0 var(--cd-space-xxl);
     text-align: center;
+    position: relative;
+    z-index: 1;
 
     & .cd-icon {
       color: var(--cd-title-color);
+      display: block;
+    }
+  }
+
+  & .cd-toolbar-back {
+    padding: 0 var(--cd-space-xxl) 0 var(--cd-space-l);
+  }
+
+  & .cd-toolbar-search.cd-toolbar-search-suffix {
+    padding-right: var(--cd-space-m);
+
+    & +.cd-toolbar-suffix {
+      padding-left: var(--cd-space-m);
     }
   }
 

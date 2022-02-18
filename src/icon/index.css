@@ -4,6 +4,8 @@
   height: 24px;
   color: #666;
   vertical-align: middle;
+  box-sizing: border-box;
+  padding: var(--cd-space-m);
 
   & svg {
     vertical-align: top;

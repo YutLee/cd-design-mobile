@@ -8,7 +8,8 @@ import closeEyeIcon from './icons/close-eye.svg'
 import closeIcon from './icons/close.svg'
 
 export type InputSize = 's' | 'm' | 'l'
-export type InputChangeEventHandler = (event: ChangeEvent<HTMLInputElement>) => void
+export type clearEvent = { currentTarget: { value: string } }
+export type InputChangeEventHandler = (event: ChangeEvent<HTMLInputElement> | clearEvent) => void
 export type InputClearEventHandler = () => void
 export type InputPressEnterEventHandler = (event: KeyboardEvent<HTMLInputElement> | {currentTarget: HTMLInputElement}) => void
 type countProps = {
@@ -59,7 +60,7 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
     ...rest
   } = props
   const [show, setShow] = useState(false)
-  const [val, setVal] = useState(typeof value === 'undefined' ? defaultValue : value)
+  const [val, setVal] = useState(typeof value === 'undefined' ? (defaultValue || '') : value)
   const [isFocus, setIsFocus] = useState(false)
   const currentRef = (ref as any) || React.createRef<HTMLElement>()
   const wrapper = clear || count || prefix || suffix
@@ -93,6 +94,7 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
 
   const handlClear = () => {
     setVal('')
+    onChange?.({currentTarget: { value: '' }})
     onClear?.()
   }
 
@@ -130,13 +132,13 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
         />
         {
           clear && val !== '' &&
-            <Icon src={closeIcon} className="c-input-close-icon" color="inherit" onClick={handlClear} />
+            <Icon src={closeIcon} className="c-input-close-icon" onClick={handlClear} />
         }
         {
           type === 'password' && visibilityToggle && (
             iconRender ?
               <span className="c-input-eye-icon" onClick={handlShow}>{iconRender(show)}</span> :
-              <Icon src={show ? eyeIcon : closeEyeIcon} className="c-input-eye-icon" color="inherit" onClick={handlShow} />
+              <Icon src={show ? eyeIcon : closeEyeIcon} className="c-input-eye-icon" onClick={handlShow} />
           )
         }
         {

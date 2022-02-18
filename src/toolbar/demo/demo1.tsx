@@ -1,23 +1,25 @@
-import { ChangeEvent } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Toolbar from '..'
-import { Icon } from '../..'
+import { Icon, SearchBar } from '../..'
 import closeSVG from '../../icon/demo/icons/close.svg'
-import { InputPressEnterEventHandler } from '../../input'
+import { InputChangeEventHandler } from '../../input'
+import { SearchBarSearchEventHandler } from '../../search-bar'
 
 export default () => {
   const navigate = useNavigate()
+  const [value, setValue] = useState('')
 
   const handleSearchClick = () => {
     navigate('/search')
   }
 
-  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event.currentTarget.value)
+  const handleSearchChange: InputChangeEventHandler = (event) => {
+    setValue(event.currentTarget.value)
   }
 
-  const handleSearch: InputPressEnterEventHandler = (event) => {
-    console.log(event.currentTarget.value)
+  const handleSearch: SearchBarSearchEventHandler = (value) => {
+    console.log(value)
   }
 
   return (
@@ -38,7 +40,11 @@ export default () => {
         <h4>搜索图标+后缀</h4>
         <Toolbar title="我的收藏" showSearchIcon onSearchClick={handleSearchClick} suffix="编辑" />
         <h4>搜索工具栏</h4>
-        <Toolbar type="search" suffix="搜索" onSearchChange={handleSearchChange} onSearch={handleSearch} />
+        <Toolbar>
+          <div style={{flex: 1}}>
+            <SearchBar value={value} onSearchChange={handleSearchChange} onSearch={handleSearch} />
+          </div>
+        </Toolbar>
         <div style={{height: '1000px'}}></div>
       </div>
     </>

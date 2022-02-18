@@ -1,16 +1,14 @@
-import { createRef, forwardRef, MouseEventHandler, ReactNode, useRef } from 'react'
+import { createRef, forwardRef, MouseEventHandler, ReactNode } from 'react'
 import classNames from 'classnames'
 import './index.css'
 import '../index.css'
 import { Icon } from '..'
 import backSVG from './icons/back.svg'
 import searchSVG from './icons/search.svg'
-import Input, { InputChangeEventHandler, InputPressEnterEventHandler } from '../input'
 
 export type ToolbarProps = {
   children?: ReactNode
   className?: string
-  type?: 'default' | 'search'
   title?: ReactNode
   bordered?: boolean
   backIcon?: ReactNode
@@ -23,15 +21,12 @@ export type ToolbarProps = {
   onSuffixClick?: MouseEventHandler<HTMLSpanElement>
   onBack?: MouseEventHandler<HTMLSpanElement>
   onSearchClick?: MouseEventHandler<HTMLSpanElement>
-  onSearchChange?: InputChangeEventHandler
-  onSearch?: InputPressEnterEventHandler
 }
 
 const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
   const {
     className,
     children,
-    type = 'default',
     title,
     bordered = true,
     backIcon,
@@ -44,8 +39,6 @@ const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
     onSuffixClick,
     onBack,
     onSearchClick,
-    onSearchChange,
-    onSearch,
     ...rest
   } = props
   const currentRef = (ref as any) || createRef<HTMLElement>()
@@ -57,8 +50,6 @@ const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
     className
   )
 
-  const inputRef = useRef()
-
   const handleBack: MouseEventHandler<HTMLSpanElement> = (event) => {
     onBack?.(event)
     !event.isDefaultPrevented() && window.history.back()
@@ -66,11 +57,6 @@ const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
 
   const handleSuffixClick: MouseEventHandler<HTMLSpanElement> = (event) => {
     onSuffixClick?.(event)
-    inputRef.current && onSearch?.({currentTarget: inputRef.current})
-  }
-
-  const handleSearch: InputPressEnterEventHandler = (event) => {
-    onSearch?.(event)
   }
 
   return (
@@ -88,28 +74,13 @@ const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
           </span>
       }
       {
-        type === 'search' ?
-          <div className="cd-toolbar-search-bar">
-            <Input
-              ref={inputRef}
-              type="search"
-              placeholder={placeholder}
-              size="s"
-              enterKeyHint="search"
-              prefix={<Icon src={searchSVG} color="inherit" />}
-              onChange={onSearchChange}
-              onPressEnter={handleSearch}
-            />
-          </div> : (
-            title &&
-              <div className="cd-toolbar-title"><h3>{title}</h3></div>
-          )
-
+        title &&
+          <div className="cd-toolbar-title"><h3>{title}</h3></div>
       }
       {children}
       {
         showSearchIcon &&
-          <span className="cd-toolbar-search" onClick={onSearchClick}>
+          <span className={classNames('cd-toolbar-search', { 'cd-toolbar-search-suffix': suffix })} onClick={onSearchClick}>
             {
               searchIcon || <Icon src={searchSVG} color="inherit" />
             }

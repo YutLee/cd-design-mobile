@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import { createPortal } from 'react-dom'
 import { createRef, forwardRef, MouseEventHandler, ReactNode, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import './index.css'
@@ -84,7 +84,7 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
       >
         {
           (title || closable) &&
-            <Row  className="cd-drawer-header">
+            <Row className="cd-drawer-header">
               {
                 closable === 'left' && close
               }
@@ -119,7 +119,7 @@ const Drawer = (props: DrawerProps) => {
   }
 
   return (
-    ReactDOM.createPortal(
+    createPortal(
       <InternalDrawer {...props} />,
       props.mountNode
     )
