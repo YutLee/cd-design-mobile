@@ -88,6 +88,7 @@ html {
   --cd-primary-gradient: linear-gradient(90deg, #ffd961 0%, #fabe00 100%);
   --cd-red-gradient: linear-gradient(270deg, #f5232e 0%, #f7545d 100%);
   --cd-orange-gradient: linear-gradient(270deg, #fa8c16 0%, #fba446 100%);
+  --cd-blue-color: #0e78f7;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 

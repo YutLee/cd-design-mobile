@@ -10,6 +10,7 @@
 - [x] [Badge 徽标数](https://github.com/YutLee/cd-design-mobile/blob/main/src/badge/README.md)
 - [x] [Tag 标签](https://github.com/YutLee/cd-design-mobile/blob/main/src/tag/README.md)
 - [x] [Textarea 多行输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/textarea/README.md)
+- [x] [Timeline 时间轴](https://github.com/YutLee/cd-design-mobile/blob/main/src/timeline/README.md)
 - [x] [Image 图片](https://github.com/YutLee/cd-design-mobile/blob/main/src/image/README.md)
 - [x] [Empty 空状态](https://github.com/YutLee/cd-design-mobile/blob/main/src/empty/README.md)
 - [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
@@ -22,7 +23,6 @@
 - [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
 - [x] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)
 - [x] [Steps 步骤条](https://github.com/YutLee/cd-design-mobile/blob/main/src/steps/README.md)
-- [ ] ~~[Timeline 时间轴]~~
 - [ ] ~~[BackTop 回到顶部]~~
 - [ ] ~~Tree 树形控件~~
 - [ ] ~~Pagination 分页~~

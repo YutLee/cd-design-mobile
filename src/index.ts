@@ -22,7 +22,7 @@ import Switch from './switch'
 import Tabs, { TabPanel } from './tabs'
 import Tag from './tag'
 import Textarea from './textarea'
-// import Timeline from './timeline'
+import Timeline from './timeline'
 import Toast from './toast'
 import Toolbar from './toolbar'
 // import Upload from './upload'
@@ -54,7 +54,7 @@ export {
   TabPanel,
   Tag,
   Textarea,
-  // Timeline,
+  Timeline,
   Toast,
   Toolbar,
   // Upload,
