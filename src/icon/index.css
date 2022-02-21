@@ -22,6 +22,7 @@
   &.cd-icon-s {
     width: 16px;
     height: 16px;
+    padding: var(--cd-space-s);
   }
 
   &.cd-icon-l {

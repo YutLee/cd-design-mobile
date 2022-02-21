@@ -2,13 +2,8 @@
   display: inline-block;
   line-height: 1;
 
-  &.cd-rate-disabled {
-
-  }
-
   & .cd-rate-item {
     display: inline-block;
-    margin-right: var(--cd-space-l);
     padding: 1px;
     line-height: 1;
     vertical-align: top;
@@ -22,8 +17,6 @@
     }
 
     & .cd-icon {
-      width: 14px;
-      height: 14px;
       vertical-align: top;
       color: inherit;
     }

@@ -18,10 +18,21 @@
   min-width: var(--cd-tag-m);
   vertical-align: top;
 
+  & .cd-icon {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    vertical-align: top;
+  }
+
   &.cd-tag-s {
     height: var(--cd-tag-s);
     border-radius: var(--cd-radius-s);
     padding: 0 var(--cd-space-m);
+
+    & .cd-icon {
+      padding: 1px;
+    }
   }
 
   &.cd-tag-circle {
@@ -43,19 +54,15 @@
   }
 
   & .cd-tag-close-icon {
-    color: var(--cd-bg-gray-color);
     margin-left: var(--cd-space-m);
     cursor: pointer;
-    width: var(--cd-secondary-text-size);
-    height: var(--cd-secondary-text-size);
-    vertical-align: -1px;
+    fill: var(--cd-bg-gray-color);
   }
 
   & .cd-tag-icon {
     margin-right: var(--cd-space-m);
     width: var(--cd-secondary-text-size);
     height: var(--cd-secondary-text-size);
-    vertical-align: -1px;
   }
 
   &.cd-tag-coupon {

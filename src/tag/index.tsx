@@ -65,7 +65,7 @@ const Tag = forwardRef<unknown, TextareaProps>((props, ref) => {
             {
               closeIcon !== undefined ?
                 closeIcon :
-                <Icon src={closeSVG} className="cd-tag-close-icon" color="inherit" />
+                <Icon src={closeSVG} className="cd-tag-close-icon" />
             }
           </span>
       }
