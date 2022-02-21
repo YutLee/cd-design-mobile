@@ -4,6 +4,7 @@
   "scripts": {
     "start": "vite --host",
     "build": "tsc && vite build",
+    "build:demo": "tsc && vite build --mode demo",
     "serve": "vite preview"
   },
   "dependencies": {
