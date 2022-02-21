@@ -1,4 +1,62 @@
-# cd-design-mobile
+<h1 align="center">CD Design Mobile</h1>
+
+<div align="center">
+
+一套基于 React 和 Typescript 的 UI 组件库。
+
+[![NPM version][npm-image]][npm-url] [![NPM downloads][download-image]][download-url]
+
+[npm-image]: http://img.shields.io/npm/v/cd-design-mobile.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/cd-design-mobile
+[download-image]: https://img.shields.io/npm/dm/cd-design-mobile.svg?style=flat-square
+[download-url]: https://www.npmjs.com/package/cd-design-mobile
+</div>
+
+## ✨ 特性
+
+- 📦 开箱即用的 React 移动端 UI 组件。
+- 🛡 使用 TypeScript 开发，提供完整的类型定义文件。
+
+## 🖥 兼容环境
+
+- 现代浏览器。
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br>Safari |
+| --- | --- | --- | --- |
+| Edge | last 2 versions | last 2 versions | last 2 versions |
+
+## 📦 安装
+
+```bash
+npm install cd-design-mobile --save
+```
+
+```bash
+yarn add cd-design-mobile
+```
+
+## 🔨 示例
+
+```jsx
+import { Button, Rate } from 'cd-design-mobile'
+
+const App = () => (
+  <>
+    <Button type="primary">按一下试试</Button>
+    <Rate disabled />
+  </>
+)
+```
+
+引入样式：
+
+```jsx
+import 'cd-design-mobile/css'
+```
+
+## 🔗 链接
+
+- [Demo](https://cdm.yutlee.com/)
 - [x] [ActionSheet 上拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/action-sheet/README.md)
 - [x] [Badge 徽标数](https://github.com/YutLee/cd-design-mobile/blob/main/src/badge/README.md)
 - [x] [Button 按钮](https://github.com/YutLee/cd-design-mobile/blob/main/src/button/README.md)
@@ -63,3 +121,16 @@
 - [ ] ~~Spin 加载中~~
 - [ ] ~~Anchor 锚点~~
 - [ ] ~~ConfigProvider 全局化配置~~
+
+## ⌨️ 本地开发
+
+克隆到本地开发:
+
+```bash
+$ git clone https://github.com/YutLee/cd-design-mobile.git
+$ cd cd-design-mobile
+$ yarn
+$ yarn start
+```
+
+打开浏览器访问 http://127.0.0.1:3000 
