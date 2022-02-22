@@ -1,0 +1,234 @@
+.cd-coupon {
+  display: flex;
+  border-radius: var(--cd-radius-l);
+  overflow: hidden;
+  position: relative;
+
+  & .cd-coupon-seal {
+    position: absolute;
+    top: -10px;
+    right: var(--cd-space-l);
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    fill: rgba(0, 0, 0, .3);
+  }
+
+  & .cd-coupon-desc {
+    flex: 1;
+    background-color: var(--cd-coupon-color);
+    padding: var(--cd-space-xl) var(--cd-space-l) var(--cd-space-xl) var(--cd-space-xxl);
+    position: relative;
+  }
+
+  & .cd-coupon-face-value {
+    background-color: var(--cd-coupon-highlight-color);
+    width: 108px;
+    padding: var(--cd-space-xl) var(--cd-space-l) var(--cd-space-xl) 0;
+    text-align: center;
+  }
+
+  & .cd-coupon-top-right-corner,
+  & .cd-coupon-bottom-right-corner,
+  & .cd-coupon-top-left-corner,
+  & .cd-coupon-bottom-left-corner {
+    display: block;
+    width: 7px;
+    height: 6px;
+  }
+
+  & .cd-coupon-right-corner, & .cd-coupon-left-corner {
+    display: block;
+    width: 7px;
+    height: calc(100% - 12px);
+  }
+
+  & .cd-coupon-top-right-corner,
+  & .cd-coupon-bottom-right-corner,
+  & .cd-coupon-right-corner {
+    background-color: var(--cd-coupon-color);
+  }
+
+  & .cd-coupon-top-left-corner,
+  & .cd-coupon-bottom-left-corner,
+  & .cd-coupon-left-corner {
+    background-color: var(--cd-coupon-highlight-color);
+  }
+
+  & .cd-coupon-top-right-corner {
+    clip-path: path('M7 8.40425e-05V0H2.94495L7 8.40425e-05ZM0.0117945 0H0V6H6.96765C4.00912 5.98438 1.55731 3.8275 1.08296 1.00008C1.0287 0.67666 0.72214 0.00734996 0.0117945 0Z');
+  }
+
+  & .cd-coupon-bottom-right-corner {
+    clip-path: path('M7 5.99992L7 6L2.94495 6L7 5.99992ZM0.0117945 6L0 6L1.04907e-06 0L6.96765 1.21826e-06C4.00912 0.0156176 1.55731 2.1725 1.08296 4.99992C1.0287 5.32334 0.72214 5.99265 0.0117945 6Z');
+  }
+
+  & .cd-coupon-top-left-corner {
+    clip-path: path('M0 8.40425e-05V0H4.05505L0 8.40425e-05ZM6.98821 0H7V6H0.0323462C2.99088 5.98438 5.44269 3.8275 5.91704 1.00008C5.9713 0.67666 6.27786 0.00734996 6.98821 0Z');
+  }
+
+  & .cd-coupon-bottom-left-corner {
+    clip-path: path('M0 5.99992L0 6L4.05505 6L0 5.99992ZM6.98821 6L7 6L7 0L0.0323468 -6.09132e-07C2.99088 0.0156165 5.44269 2.1725 5.91704 4.99992C5.9713 5.32334 6.27786 5.99265 6.98821 6Z');
+  }
+
+  & .cd-coupon-shadow-a {
+    position: absolute;
+    width: 70px;
+    height: 20.7px;
+    left: 30%;
+    top: 10px;
+
+    background: linear-gradient(245.12deg, #FDF0C9 34.16%, rgba(255, 253, 249, 0) 71.88%);
+    mix-blend-mode: soft-light;
+    opacity: 0.6;
+    transform: rotate(-45deg);
+  }
+
+  & .cd-coupon-shadow-b {
+    position: absolute;
+    width: 70px;
+    height: 16px;
+    left: calc(30% + 20px);
+    top: 10px;
+
+    background: linear-gradient(245.12deg, #FFF4D2 34.16%, rgba(255, 253, 249, 0) 74.1%);
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    transform: rotate(-45deg);
+  }
+
+  & .cd-coupon-title {
+    font-size: var(--cd-text-size);
+    color: var(--cd-title-color);
+    font-weight: 600;
+    line-height: var(--cd-h4-line-height);
+  }
+
+  & .cd-coupon-date, & .cd-coupon-info, & .cd-coupon-condition {
+    font-size: var(--cd-secondary-text-size);
+    line-height: var(--cd-secondary-text-line-height);
+  }
+
+  & .cd-coupon-info {
+    color: var(--cd-text-color);
+    margin-top: var(--cd-space-l);
+  }
+
+  & .cd-coupon-date {
+    color: var(--cd-secondary-text-color);
+    margin-top: var(--cd-space-l);
+  }
+
+  & .cd-coupon-price {
+    font-size: 24px;
+    line-height: var(--cd-h2-line-height);
+    color: var(--cd-title-color);
+    font-weight: 600;
+
+    & .cd-coupon-yen {
+      font-size: var(--cd-text-size);
+      display: inline-block;
+      vertical-align: top;
+      line-height: var(--cd-text-line-height);
+      margin-top: var(--cd-space-l);
+    }
+  }
+
+  & .cd-coupon-condition {
+    color: var(--cd-title-color);
+  }
+
+  & .cd-button:not(.cd-button-primary) {
+    height: var(--cd-button-s);
+    background-color: var(--cd-title-color);
+    color: var(--cd-primary-color);
+    margin-top: var(--cd-space-l);
+    line-height: 22px;
+
+    &:disabled {
+      background-color: var(--cd-secondary-text-color);
+      color: var(--cd-white-color);
+    }
+  }
+
+  & .cd-button-primary {
+    height: 20px;
+    line-height: 18px;
+    margin-left: var(--cd-space-l);
+    vertical-align: top;
+    margin-top: 2px;
+  }
+
+  &.cd-coupon-disabled {
+    & .cd-coupon-desc {
+      background-color: var(--cd-border-color);
+    }
+
+    & .cd-coupon-face-value {
+      background-color: var(--cd-other-text-color);
+    }
+
+    & .cd-coupon-top-right-corner,
+    & .cd-coupon-bottom-right-corner,
+    & .cd-coupon-right-corner {
+      background-color: var(--cd-border-color);
+    }
+
+    & .cd-coupon-top-left-corner,
+    & .cd-coupon-bottom-left-corner,
+    & .cd-coupon-left-corner {
+      background-color: var(--cd-other-text-color);
+    }
+  }
+
+  &.cd-coupon-readonly {
+    & .cd-coupon-desc {
+      background-color: var(--cd-white-color);
+    }
+
+    & .cd-coupon-face-value {
+      background-color: var(--cd-bg-gray-color);
+
+      & .cd-coupon-price {
+        margin-top: var(--cd-space-xl);
+      }
+    }
+
+    & .cd-coupon-top-right-corner,
+    & .cd-coupon-bottom-right-corner,
+    & .cd-coupon-right-corner {
+      background-color: var(--cd-white-color);
+    }
+
+    & .cd-coupon-top-left-corner,
+    & .cd-coupon-bottom-left-corner,
+    & .cd-coupon-left-corner {
+      background-color: var(--cd-bg-gray-color);
+    }
+
+    & .cd-coupon-store {
+      display: flex;
+
+      & .cd-icon {
+        width: 48px;
+        height: 48px;
+        background-color: var(--cd-border-color);
+        fill: var(--cd-inner-bg-color);
+        padding: var(--cd-space-l);
+        border-radius: var(--cd-radius-m);
+        margin-right: var(--cd-space-l);
+      }
+
+      & .cd-coupon-title {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        flex: 1;
+        line-height: var(--cd-text-line-height);
+        height: calc(var(--cd-text-line-height) * 2)
+      }
+    }
+  }
+}
+

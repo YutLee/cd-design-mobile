@@ -5,6 +5,7 @@ import Badge from './badge'
 import Button from './button'
 import Card from './card'
 import Checkbox from './checkbox'
+import Coupon from './coupon'
 import Dialog from './dialog'
 import Divider from './divider'
 import Drawer from './drawer'
@@ -36,6 +37,7 @@ export {
   Button,
   Card,
   Checkbox,
+  Coupon,
   Dialog,
   Divider,
   Drawer,

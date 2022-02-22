@@ -62,6 +62,7 @@ import 'cd-design-mobile/css'
 - [x] [Button 按钮](https://github.com/YutLee/cd-design-mobile/blob/main/src/button/README.md)
 - [x] [Card 卡片](https://github.com/YutLee/cd-design-mobile/blob/main/src/card/README.md)
 - [x] [Checkbox 复选框](https://github.com/YutLee/cd-design-mobile/blob/main/src/checkbox/README.md)
+- [x] [Coupon 优惠券](https://github.com/YutLee/cd-design-mobile/blob/main/src/coupon/README.md)
 - [x] [Divider 分割线](https://github.com/YutLee/cd-design-mobile/blob/main/src/divider/README.md)
 - [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
 - [x] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)

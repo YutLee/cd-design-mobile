@@ -4,6 +4,7 @@ import BadgeDemo from './badge/demo/demo1'
 import ButtonDemo from './button/demo/demo1'
 import CardDemo from './card/demo/demo1'
 import CheckboxDemo from './checkbox/demo/demo1'
+import CouponDemo from './coupon/demo/demo1'
 import DialogDemo from './dialog/demo/demo1'
 import DividerDemo from './divider/demo/demo1'
 import DrawerDemo from './drawer/demo/demo1'
@@ -40,6 +41,7 @@ export default resolvePath([
   ['/button', 'Button 按钮', ButtonDemo],
   ['/card', 'Card 卡片', CardDemo],
   ['/checkbox', 'Checkbox 复选框', CheckboxDemo],
+  ['/coupon', 'Coupon 优惠券', CouponDemo],
   ['/dialog', 'Dialog 对话框', DialogDemo],
   ['/divider', 'Divider 分割线', DividerDemo],
   ['/drawer', 'Drawer 抽屉', DrawerDemo],
