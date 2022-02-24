@@ -70,6 +70,7 @@ import 'cd-design-mobile/css'
 - [x] [Grid 栅格](https://github.com/YutLee/cd-design-mobile/blob/main/src/grid/README.md)
 - [x] [Icon 图标](https://github.com/YutLee/cd-design-mobile/blob/main/src/icon/README.md)
 - [x] [Image 图片](https://github.com/YutLee/cd-design-mobile/blob/main/src/image/README.md)
+- [x] [List 列表](https://github.com/YutLee/cd-design-mobile/blob/main/src/list/README.md)
 - [x] [Input 输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/input/README.md)
 - [x] [NumberInput 数字输入框](https://github.com/YutLee/cd-design-mobile/blob/main/src/number-input/README.md)
 - [x] [Radio 单选框](https://github.com/YutLee/cd-design-mobile/blob/main/src/radio/README.md)

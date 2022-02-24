@@ -14,6 +14,7 @@ import { Row, Col } from './grid'
 import Icon from './icon'
 import Image from './image'
 import Input from './input'
+import List from './list'
 // import Navigation from './navigation'
 import NumberInput from './number-input'
 import Radio from './radio'
@@ -47,6 +48,7 @@ export {
   Icon,
   Image,
   Input,
+  List,
   // Navigation,
   NumberInput,
   Radio,

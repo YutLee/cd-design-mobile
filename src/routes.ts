@@ -13,6 +13,7 @@ import GridDemo from './grid/demo/demo1'
 import IconDemo from './icon/demo/demo1'
 import ImageDemo from './image/demo/demo1'
 import InputDemo from './input/demo/demo1'
+import ListDemo from './list/demo/demo1'
 import NumberInputDemo from './number-input/demo/demo1'
 import RadioDemo from './radio/demo/demo1'
 import RateDemo from './rate/demo/demo1'
@@ -50,6 +51,7 @@ export default resolvePath([
   ['/icon', 'Icon 图标', IconDemo],
   ['/image', 'Image 图片', ImageDemo],
   ['/input', 'Input 输入框', InputDemo],
+  ['/list', 'List 列表', ListDemo],
   ['/number-input', 'NumberInput 数字输入框', NumberInputDemo],
   ['/radio', 'Radio 单选框', RadioDemo],
   ['/rate', 'Rate 评分', RateDemo],
