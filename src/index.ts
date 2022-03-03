@@ -9,6 +9,7 @@ import Coupon from './coupon'
 import Dialog from './dialog'
 import Divider from './divider'
 import Drawer from './drawer'
+import Dropdown from './dropdown'
 import Empty from './empty'
 import { Row, Col } from './grid'
 import Icon from './icon'
@@ -22,7 +23,7 @@ import Rate from './rate'
 import SearchBar from './search-bar'
 import Steps from './steps'
 import Switch from './switch'
-import Tabs, { TabPanel } from './tabs'
+import Tabs from './tabs'
 import Tag from './tag'
 import Textarea from './textarea'
 import Timeline from './timeline'
@@ -42,6 +43,7 @@ export {
   Dialog,
   Divider,
   Drawer,
+  Dropdown,
   Empty,
   Row,
   Col,
@@ -57,7 +59,6 @@ export {
   Steps,
   Switch,
   Tabs,
-  TabPanel,
   Tag,
   Textarea,
   Timeline,

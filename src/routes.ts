@@ -8,6 +8,7 @@ import CouponDemo from './coupon/demo/demo1'
 import DialogDemo from './dialog/demo/demo1'
 import DividerDemo from './divider/demo/demo1'
 import DrawerDemo from './drawer/demo/demo1'
+import DropdownDemo from './dropdown/demo/demo1'
 import EmptyDemo from './empty/demo/demo1'
 import GridDemo from './grid/demo/demo1'
 import IconDemo from './icon/demo/demo1'
@@ -46,6 +47,7 @@ export default resolvePath([
   ['/dialog', 'Dialog 对话框', DialogDemo],
   ['/divider', 'Divider 分割线', DividerDemo],
   ['/drawer', 'Drawer 抽屉', DrawerDemo],
+  ['/dropdown', 'Dropdown 下拉菜单', DropdownDemo],
   ['/empty', 'Empty 空状态', EmptyDemo],
   ['/grid', 'Grid 栅格', GridDemo],
   ['/icon', 'Icon 图标', IconDemo],

@@ -9,15 +9,20 @@
 ## API
 属性 | 说明 | 类型 | 默认值
 ---|---|---|---
-title | 标题 | ReactNode | -
+className | 抽屉类名 | string | -
+children | 抽屉内容 | ReactNode | -
 closable | 关闭按钮显示位置，'' 表示不显示 | `right` \| `left` \| '' | `right`
 closeIcon | 自定义关闭图标 | ReactNode | -
-extra | 抽屉右上角的操作区域 | ReactNode | -
 direction | 抽屉的方向 | `top` \| `right` \| `bottom` \| `left` | `bottom`
-mask | 是否展示遮罩 | boolean | true
-maskClosable | 点击蒙层是否允许关闭 | boolean | true
 footer | 抽屉的页脚 | ReactNode | -
 footerClassName | 抽屉的页脚类名 | string | -
-visible | Drawer 是否可见 | boolean | false
+mask | 是否展示遮罩 | boolean | true
+maskClosable | 点击蒙层是否允许关闭 | boolean | true
+maskStyle | 遮罩层样式 | CSSProperties | -
 mountNode | 指定 Drawer 挂载的 HTML 节点, false 为挂载在当前 dom | HTMLElemen \| false | body
+style | 抽屉样式 | CSSProperties | -
+title | 标题 | ReactNode | -
+visible | Drawer 是否可见 | boolean | false
+onClick | 点击抽屉的回调 | function(event) | -
 onClose | 点击遮罩层或取消按钮的回调 | function(event) | -
+onFooterClick | 点击页脚的回调 | function(event) | -

@@ -1,0 +1,111 @@
+.cd-dropdown {
+  position: relative;
+  display: inline-flex;
+  background-color: var(--cd-divider-color);
+  padding: var(--cd-space-m) var(--cd-space-xl);
+  border-radius: var(--cd-radius-xxl);
+
+  & .cd-dropdown-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 32px;
+  }
+
+  & .cd-dropdown-mask {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: var(--cd-cover-color);
+    opacity: 0;
+
+    &.cd-dropdown-mask-open {
+      z-index: 10;
+      opacity: 1;
+    }
+  }
+
+  & .cd-dropdown-current {
+    color: var(--cd-title-color);
+    font-size: var(--cd-text-size);
+    line-height: var(--cd-h4-line-height);
+    pointer-events: none;
+  }
+
+  & .cd-dropdown-arrow {
+    pointer-events: none;
+
+    & .cd-icon {
+      padding: 0;
+      transition: transform ease 100ms;
+      vertical-align: top;
+    }
+  }
+
+  &.cd-dropdown-active {
+    & .cd-dropdown-arrow {
+      & .cd-icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &.cd-dropdown-disabled {
+    cursor: not-allowed;
+
+    & .cd-dropdown-current {
+      color: var(--cd-other-text-color);
+    }
+
+    & .cd-dropdown-arrow {
+      & .cd-icon {
+        fill: var(--cd-other-text-color);
+      }
+    }
+  }
+}
+
+.cd-drawer.cd-drawer-dropdown-options {
+  padding: var(--cd-space-xl) 0;
+  transform: translate3d(0, -50%, 0) scale(1, 0);
+  box-shadow: none;
+
+  &.cd-drawer-open {
+    transform: translate3d(0, 0, 0) scale(1, 1);
+  }
+}
+
+.cd-dropdown-option {
+  color: var(--cd-text-color);
+  font-size: var(--cd-text-size);
+  line-height: var(--cd-h4-line-height);
+  padding: var(--cd-space-l) var(--cd-space-xxl);
+  display: flex;
+
+  & .cd-dropdown-option-content {
+    flex: 1;
+  }
+
+  & .cd-icon {
+    padding: 0;
+    vertical-align: top;
+  }
+
+  &.cd-dropdown-option-selected {
+    color: var(--cd-primary-color);
+    font-weight: bold;
+    font-size: var(--cd-h4-size);
+
+    & .cd-icon {
+      fill: var(--cd-primary-color);
+    }
+  }
+
+  &.cd-dropdown-option-disabled {
+    color: var(--cd-other-text-color);
+    cursor: not-allowed;
+  }
+}

@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom'
-import { createRef, forwardRef, MouseEventHandler, ReactNode, useEffect, useState } from 'react'
+import { createRef, CSSProperties, forwardRef, MouseEventHandler, ReactNode, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import './index.css'
 import '../index.css'
@@ -8,20 +8,23 @@ import closeSVG from './icons/close.svg'
 
 export type DrawerDirectionType = 'top' | 'right' | 'bottom' | 'left'
 export type DrawerProps = {
-  children?: ReactNode
   className?: string
-  title?: string
+  children?: ReactNode
   closable?: 'right '| 'left' | ''
   closeIcon?: ReactNode
-  extra?: ReactNode
   direction?: DrawerDirectionType
-  mask?: boolean
-  maskClosable?: boolean
   footer?: ReactNode
   footerClassName?: string
+  mask?: boolean
+  maskClosable?: boolean
+  maskStyle?: CSSProperties
+  mountNode?: HTMLElement | boolean
+  style?: CSSProperties
+  title?: string
   visible?: boolean
-  mountNode?: HTMLElement
+  onClick?: MouseEventHandler
   onClose?: MouseEventHandler
+  onFooterClick?: MouseEventHandler
 }
 
 const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
@@ -31,15 +34,17 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
     title,
     closable = 'right',
     closeIcon,
-    extra,
     direction = 'bottom',
     mask = true,
     maskClosable = true,
     footer,
     footerClassName,
     visible = false,
-    mountNode = document.body,
+    style,
+    maskStyle,
+    onClick,
     onClose,
+    onFooterClick,
     ...rest
   } = props
   const [open, setOpen] = useState(visible)
@@ -54,14 +59,12 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
   )
 
   const handleClose: MouseEventHandler = (event) => {
-    setOpen(false)
     onClose?.(event)
   }
 
   const handleMaskClick: MouseEventHandler = (event) => {
     if (!maskClosable) return
 
-    setOpen(false)
     onClose?.(event)
   }
 
@@ -75,11 +78,13 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
     <>
       {
         mask &&
-        <div className={classNames('cd-drawer-mask', {'cd-drawer-mask-open': open})} onClick={handleMaskClick}></div>
+        <div style={maskStyle} className={classNames('cd-drawer-mask', {'cd-drawer-mask-open': open})} onClick={handleMaskClick}></div>
       }
       <div
         ref={currentRef}
         className={classes}
+        style={style}
+        onClick={onClick}
         {...rest}
       >
         {
@@ -101,10 +106,13 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
         </div>
         {
           footer &&
-            <div className={classNames(
-              'cd-drawer-footer',
-              footerClassName
-            )}>
+            <div
+              className={classNames(
+                'cd-drawer-footer',
+                footerClassName
+              )}
+              onClick={onFooterClick}
+            >
               {footer}
             </div>
         }
@@ -114,14 +122,18 @@ const InternalDrawer = forwardRef<unknown, DrawerProps>((props, ref) => {
 })
 
 const Drawer = (props: DrawerProps) => {
-  if (!props.mountNode) {
+  const { mountNode = document.body } = props
+
+  if (!mountNode) {
     return <InternalDrawer {...props} />
   }
+
+  const node: HTMLElement = mountNode as HTMLElement
 
   return (
     createPortal(
       <InternalDrawer {...props} />,
-      props.mountNode
+      node
     )
   )
 }

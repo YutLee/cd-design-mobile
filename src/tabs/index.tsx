@@ -19,7 +19,7 @@ export type TabPanelProps = {
   key?: string
 }
 
-export const TabPanel = forwardRef<unknown, TabPanelProps>((props, ref) => {
+const TabPanel = forwardRef<unknown, TabPanelProps>((props, ref) => {
   const {
     className,
     children,
@@ -42,7 +42,7 @@ export const TabPanel = forwardRef<unknown, TabPanelProps>((props, ref) => {
   )
 })
 
-const Tabs = forwardRef<unknown, TabsProps>((props, ref) => {
+const InternalTabs = forwardRef<unknown, TabsProps>((props, ref) => {
   const {
     className,
     children,
@@ -114,5 +114,14 @@ const Tabs = forwardRef<unknown, TabsProps>((props, ref) => {
     </div>
   )
 })
+
+interface CompoundedComponent
+  extends React.ForwardRefExoticComponent<TabsProps> {
+  Panel: typeof TabPanel
+}
+
+const Tabs = InternalTabs as CompoundedComponent
+
+Tabs.Panel = TabPanel
 
 export default Tabs

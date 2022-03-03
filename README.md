@@ -66,6 +66,7 @@ import 'cd-design-mobile/css'
 - [x] [Divider 分割线](https://github.com/YutLee/cd-design-mobile/blob/main/src/divider/README.md)
 - [x] [Dialog 对话框](https://github.com/YutLee/cd-design-mobile/blob/main/src/dialog/README.md)
 - [x] [Drawer 抽屉](https://github.com/YutLee/cd-design-mobile/blob/main/src/drawer/README.md)
+- [x] [Dropdown 下拉菜单](https://github.com/YutLee/cd-design-mobile/blob/main/src/dropdown/README.md)
 - [x] [Empty 空状态](https://github.com/YutLee/cd-design-mobile/blob/main/src/empty/README.md)
 - [x] [Grid 栅格](https://github.com/YutLee/cd-design-mobile/blob/main/src/grid/README.md)
 - [x] [Icon 图标](https://github.com/YutLee/cd-design-mobile/blob/main/src/icon/README.md)

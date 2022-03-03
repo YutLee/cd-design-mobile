@@ -12,7 +12,7 @@ className | 类名 | string | -
 margin | 列表外边距 | `s` \| `m` \| `l` | `m`
 padding | 列表内边距 | `s` \| `m` \| `l` | `m`
 radius | 列表圆角半径 | `s` \| `m` \| `l` | `m`
-contentAlign | 列表元素内容对齐方式 | `left` \| `right` \| `center` \| `left`
+contentAlign | 列表元素内容对齐方式 | `left` \| `right` \| `center` | `left`
 
 ### List.Item
 属性 | 说明 | 类型 | 默认值
@@ -24,6 +24,6 @@ children | 列表元素内容 | ReactNode | -
 showArrow | 是否列表元素箭头 | boolean | false
 arrow | 列表元素箭头 | ReactNode | -
 padding | 列表元素内边距 | `s` \| `m` \| `l` | `m`
-contentAlign | 列表元素内容对齐方式 | `left` \| `right` \| `center` \| `left`
+contentAlign | 列表元素内容对齐方式 | `left` \| `right` \| `center` | `left`
 onItemClick | 点击列表时回调函数 | MouseEventHandler | -
 onArrowClick | 点击箭头时回调函数 | MouseEventHandler | -

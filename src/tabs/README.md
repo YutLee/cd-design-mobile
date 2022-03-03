@@ -13,7 +13,7 @@ init | 初始化选中面板的 key，如果没有设置 active | string | -
 centered | 标签居中展示 | boolean | false
 onChange | 切换面板的回调 | function(active, idx) {} | -
 
-### TabPane
+### Tabs.Panel
 属性 | 说明 | 类型 | 默认值
 ---|---|---|---
 key | 对应 active | string | -
