@@ -56,4 +56,6 @@ const Steps = forwardRef<unknown, StepsProps>((props, ref) => {
   )
 })
 
+Steps.displayName = 'Steps'
+
 export default Steps

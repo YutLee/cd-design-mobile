@@ -142,4 +142,6 @@ const Input = React.forwardRef<unknown, InputProps>((props, ref) => {
   )
 })
 
+Input.displayName = 'Input'
+
 export default Input

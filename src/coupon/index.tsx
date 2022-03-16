@@ -114,4 +114,6 @@ const Coupon = forwardRef<unknown, CouponProps>((props, ref) => {
   )
 })
 
+Coupon.displayName = 'Coupon'
+
 export default Coupon

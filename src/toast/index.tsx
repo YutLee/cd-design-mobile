@@ -145,10 +145,12 @@ const InternalToast = forwardRef<unknown, ToastProps>((props, ref) => {
   )
 })
 
-export const Toast = InternalToast as CompoundedComponent
+const Toast = InternalToast as CompoundedComponent
 
-const toast: ToastOpenEventHandler = (config) => {
+export const toast: ToastOpenEventHandler = (config) => {
   Toast.open(config)
 }
 
-export default toast
+Toast.displayName = 'Toast'
+
+export default Toast

@@ -211,5 +211,6 @@ interface CompoundedComponent
 const Dropdown = InternalDropdown as CompoundedComponent
 
 Dropdown.Option = DropdownOption
+Dropdown.displayName = 'Dropdown'
 
 export default Dropdown

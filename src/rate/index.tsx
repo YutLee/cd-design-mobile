@@ -103,4 +103,6 @@ const Rate = React.forwardRef<unknown, RateProps>((props, ref) => {
   )
 })
 
+Rate.displayName = 'Rate'
+
 export default Rate

@@ -43,4 +43,6 @@ const Divider = React.forwardRef<unknown, DividerProps>((props, ref) => {
   )
 })
 
+Divider.displayName = 'Divider'
+
 export default Divider

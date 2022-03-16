@@ -1,4 +1,4 @@
-import ActionSheet from './action-sheet'
+import ActionSheet, { actionSheet } from './action-sheet'
 // import Avatar from './avatar'
 // import BackTop from './back-top'
 import Badge from './badge'
@@ -6,7 +6,7 @@ import Button from './button'
 import Card from './card'
 import Checkbox from './checkbox'
 import Coupon from './coupon'
-import Dialog from './dialog'
+import Dialog, { dialog } from './dialog'
 import Divider from './divider'
 import Drawer from './drawer'
 import Dropdown from './dropdown'
@@ -27,12 +27,13 @@ import Tabs from './tabs'
 import Tag from './tag'
 import Textarea from './textarea'
 import Timeline from './timeline'
-import Toast from './toast'
+import Toast, { toast } from './toast'
 import Toolbar from './toolbar'
 // import Upload from './upload'
 
 export {
   ActionSheet,
+  actionSheet,
   // Avatar,
   // BackTop,
   Badge,
@@ -41,6 +42,7 @@ export {
   Checkbox,
   Coupon,
   Dialog,
+  dialog,
   Divider,
   Drawer,
   Dropdown,
@@ -63,6 +65,7 @@ export {
   Textarea,
   Timeline,
   Toast,
+  toast,
   Toolbar,
   // Upload,
 }

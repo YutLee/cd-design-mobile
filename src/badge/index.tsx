@@ -53,4 +53,6 @@ const Badge = forwardRef<unknown, BadgeProps>((props, ref) => {
   )
 })
 
+Badge.displayName = 'Badge'
+
 export default Badge

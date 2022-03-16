@@ -109,5 +109,6 @@ interface CompoundedComponent
 const Timeline = InternalTimeline as CompoundedComponent
 
 Timeline.Item = TimelineItem
+Timeline.displayName = 'Timeline'
 
 export default Timeline

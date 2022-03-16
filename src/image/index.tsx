@@ -50,4 +50,6 @@ const Image = forwardRef<unknown, ImageProps>((props, ref) => {
   )
 })
 
+Image.displayName = 'Image'
+
 export default Image

@@ -1,4 +1,4 @@
-import actionSheet from '..'
+import { actionSheet } from '..'
 import { Button } from '../..'
 
 export default () => {

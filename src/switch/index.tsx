@@ -68,4 +68,6 @@ const Switch = React.forwardRef<unknown, SwitchProps>((props, ref) => {
   )
 })
 
+Switch.displayName = 'Switch'
+
 export default Switch

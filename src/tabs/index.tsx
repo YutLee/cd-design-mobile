@@ -123,5 +123,6 @@ interface CompoundedComponent
 const Tabs = InternalTabs as CompoundedComponent
 
 Tabs.Panel = TabPanel
+Tabs.displayName = 'Tabs'
 
 export default Tabs

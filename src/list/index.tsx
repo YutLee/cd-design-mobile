@@ -139,5 +139,6 @@ interface CompoundedComponent
 const List = InternalList as CompoundedComponent
 
 List.Item = ListItem
+List.displayName = 'List'
 
 export default List

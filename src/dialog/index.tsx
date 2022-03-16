@@ -106,7 +106,7 @@ const Dialog = forwardRef<unknown, DialogProps>((props, ref) => {
   )
 })
 
-const dialog: DialogOpenEventHandler = (config) => {
+export const dialog: DialogOpenEventHandler = (config) => {
   const el = document.createElement('div')
   const idx = dialogs.length
   let instance = {}
@@ -122,4 +122,6 @@ const dialog: DialogOpenEventHandler = (config) => {
   return instance
 }
 
-export default dialog
+Dialog.displayName = 'Dialog'
+
+export default Dialog

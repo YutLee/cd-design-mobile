@@ -90,4 +90,6 @@ const Radio = React.forwardRef<unknown, RadioProps>((props, ref) => {
   )
 })
 
+Radio.displayName = 'Radio'
+
 export default Radio

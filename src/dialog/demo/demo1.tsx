@@ -1,5 +1,5 @@
 import { ChangeEvent, useRef, useState } from 'react'
-import dialog from '..'
+import { dialog } from '..'
 import { Button, Textarea } from '../..'
 
 export default () => {

@@ -117,7 +117,7 @@ const ActionSheet = forwardRef<unknown, ActionSheetProps>((props, ref) => {
   )
 })
 
-const actionSheet: ActionSheetOpenEventHandler = (config) => {
+export const actionSheet: ActionSheetOpenEventHandler = (config) => {
   const el = document.createElement('div')
   const idx = actionSheets.length
   let instance = {}
@@ -133,4 +133,6 @@ const actionSheet: ActionSheetOpenEventHandler = (config) => {
   return instance
 }
 
-export default actionSheet
+ActionSheet.displayName = 'ActionSheet'
+
+export default ActionSheet

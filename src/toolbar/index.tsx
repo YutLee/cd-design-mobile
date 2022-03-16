@@ -95,4 +95,6 @@ const Toolbar = forwardRef<unknown, ToolbarProps>((props, ref) => {
   )
 })
 
+Toolbar.displayName = 'Toolbar'
+
 export default Toolbar

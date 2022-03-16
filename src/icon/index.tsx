@@ -139,4 +139,6 @@ const Icon = forwardRef<unknown, IconType>((props: IconType, ref) => {
   )
 })
 
+Icon.displayName = 'Icon'
+
 export default Icon

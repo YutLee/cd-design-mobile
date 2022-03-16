@@ -1,4 +1,4 @@
-import toast, { Toast, ToastType } from '..'
+import Toast, { toast, ToastType } from '..'
 import { Button } from '../..'
 
 export default () => {

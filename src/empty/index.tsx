@@ -48,4 +48,6 @@ const Empty = forwardRef<unknown, EmptyProps>((props, ref) => {
   )
 })
 
+Empty.displayName = 'Empty'
+
 export default Empty

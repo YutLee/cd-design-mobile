@@ -73,4 +73,6 @@ const Tag = forwardRef<unknown, TextareaProps>((props, ref) => {
   )
 })
 
+Tag.displayName = 'Tag'
+
 export default Tag
